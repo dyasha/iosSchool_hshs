@@ -23,5 +23,6 @@ class ViewController: UIViewController {
         nextGenerator.alpha = 0
         let alpha: Brightness = .average
         let description = alpha.description()
+        print(description)
     }
 }

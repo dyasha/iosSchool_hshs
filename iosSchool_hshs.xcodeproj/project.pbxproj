@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5940FB2A2AE92FBA007FBDEF /* CharacterGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5940FB292AE92FBA007FBDEF /* CharacterGenerator.swift */; };
 		5951D6FC2AE8211B0042C0EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */; };
 		5951D6FE2AE8211B0042C0EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */; };
 		5951D7002AE8211B0042C0EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FF2AE8211B0042C0EB /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5940FB292AE92FBA007FBDEF /* CharacterGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterGenerator.swift; sourceTree = "<group>"; };
 		5951D6F82AE8211B0042C0EB /* iosSchool_hshs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool_hshs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		5951D6FA2AE8211B0042C0EB /* iosSchool_hshs */ = {
 			isa = PBXGroup;
 			children = (
+				5940FB292AE92FBA007FBDEF /* CharacterGenerator.swift */,
 				5951D70F2AE8267B0042C0EB /* ColorGenerator.swift */,
 				5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */,
 				5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */,
@@ -167,6 +170,7 @@
 				5951D7002AE8211B0042C0EB /* ViewController.swift in Sources */,
 				5951D7102AE8267B0042C0EB /* ColorGenerator.swift in Sources */,
 				5951D6FC2AE8211B0042C0EB /* AppDelegate.swift in Sources */,
+				5940FB2A2AE92FBA007FBDEF /* CharacterGenerator.swift in Sources */,
 				5951D6FE2AE8211B0042C0EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
