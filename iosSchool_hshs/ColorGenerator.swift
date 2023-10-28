@@ -26,7 +26,7 @@ struct Color {
     }
 }
 protocol ColorGeneratorProtocol {
-    var alpha: Double  { get set }
+    var alpha: Double { get set }
     var colorCodes: [Double] { get }
 
     func createColor() -> UIColor

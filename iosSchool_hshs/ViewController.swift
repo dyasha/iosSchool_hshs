@@ -13,10 +13,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         let generator = ColorGenerator(alpha: 0.5)
-        generator.alpha = 1
-        let nextGenerator = generator
-        nextGenerator.alpha = 0
-        let alpha: Brightness = .average
-        let description = alpha.description()
+        let superGenerator: ColorGeneratorProtocol = ColorGenerator(alpha: 1)
     }
 }
