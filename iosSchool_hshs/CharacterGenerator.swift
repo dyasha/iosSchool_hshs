@@ -8,29 +8,40 @@
 import Foundation
 
 struct Location {
-
     let id: Int
-    var name: String
-    var type: String
-    var dimension: String
-    var residents: [String]
+    let name: String
+    let type: String
+    let dimension: String
+    let residents: [String]
 }
 
 struct LocationList {
-
     struct Info {
-        var count: Int
-        var pages: Int
-        var next: String?
-        var prev: String?
+        let count: Int
+        let pages: Int
+        let next: String?
+        let prev: String?
 
     }
 
-    var info: Info
-    var results: [Location]
+    let info: Info
+    let results: [Location]
 }
 
 class Character {
+    enum Gender: String, CaseIterable {
+        case female = "Female"
+        case male = "Male"
+        case genderless = "Genderless"
+        case unknown = "unknown"
+    }
+
+    enum Status: String, CaseIterable {
+        case alive = "Alive"
+        case dead = "Dead"
+        case unknown = "unknown"
+    }
+
     let id: Int
     let name: String
     let species: String
@@ -60,22 +71,9 @@ class Character {
         self.status = status
     }
 
-    enum Gender: String, CaseIterable {
-        case female = "Female"
-        case male = "Male"
-        case genderless = "Genderless"
-        case unknown = "unknown"
-    }
-
-    enum Status: String, CaseIterable {
-        case alive = "Alive"
-        case dead = "Dead"
-        case unknown = "unknown"
-    }
-
     func characterInfo() -> String {
-        var statusDescription: String
-        var genderDescription: String
+        let statusDescription: String
+        let genderDescription: String
 
         switch gender {
         case .female:
@@ -101,7 +99,7 @@ class Character {
     }
 }
 
-class CharacterGenerator {
+private class CharacterGenerator {
     let genderForName: [String: Character.Gender] = [
             "Ivan": .male,
             "Anton": .male,
@@ -145,10 +143,10 @@ class CharacterGenerator {
     }
 
     func genderGenerator(name: String) -> Character.Gender {
-        if Bool.random() {
-            return genderForName[name] ?? .unknown
+        guard Bool.random() else {
+            return Character.Gender.allCases.randomElement() ?? .unknown
         }
-        return Character.Gender.allCases.randomElement() ?? .unknown
+        return genderForName[name] ?? .unknown
     }
 
     func statusGenerator() -> Character.Status {
