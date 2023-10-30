@@ -99,7 +99,7 @@ class Character {
     }
 }
 
-private class CharacterGenerator {
+class CharacterGenerator {
     let genderForName: [String: Character.Gender] = [
             "Ivan": .male,
             "Anton": .male,
@@ -130,26 +130,26 @@ private class CharacterGenerator {
         )
     }
 
-    func idGenerator() -> Int {
+   private func idGenerator() -> Int {
         return Int.random(in: 1...100)
     }
 
-    func nameGenerator() -> String {
+    private func nameGenerator() -> String {
         return genderForName.keys.randomElement() ?? "nameError"
     }
 
-    func speciesGenerator() -> String {
+    private func speciesGenerator() -> String {
         return species.randomElement() ?? "speciesError"
     }
 
-    func genderGenerator(name: String) -> Character.Gender {
+    private func genderGenerator(name: String) -> Character.Gender {
         guard Bool.random() else {
             return Character.Gender.allCases.randomElement() ?? .unknown
         }
         return genderForName[name] ?? .unknown
     }
 
-    func statusGenerator() -> Character.Status {
+    private func statusGenerator() -> Character.Status {
         return Character.Status.allCases.randomElement() ?? .unknown
     }
 

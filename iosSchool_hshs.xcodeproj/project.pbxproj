@@ -15,6 +15,7 @@
 		5951D7052AE8211D0042C0EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5951D7042AE8211D0042C0EB /* Assets.xcassets */; };
 		5951D7082AE8211D0042C0EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5951D7062AE8211D0042C0EB /* LaunchScreen.storyboard */; };
 		5951D7102AE8267B0042C0EB /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D70F2AE8267B0042C0EB /* ColorGenerator.swift */; };
+		596018F62AEAA5CE00AB04A5 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596018F52AEAA5CE00AB04A5 /* Assembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5951D7072AE8211D0042C0EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5951D7092AE8211D0042C0EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5951D70F2AE8267B0042C0EB /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
+		596018F52AEAA5CE00AB04A5 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				5951D7042AE8211D0042C0EB /* Assets.xcassets */,
 				5951D7062AE8211D0042C0EB /* LaunchScreen.storyboard */,
 				5951D7092AE8211D0042C0EB /* Info.plist */,
+				596018F52AEAA5CE00AB04A5 /* Assembly.swift */,
 			);
 			path = iosSchool_hshs;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5951D7002AE8211B0042C0EB /* ViewController.swift in Sources */,
+				596018F62AEAA5CE00AB04A5 /* Assembly.swift in Sources */,
 				5951D7102AE8267B0042C0EB /* ColorGenerator.swift in Sources */,
 				5951D6FC2AE8211B0042C0EB /* AppDelegate.swift in Sources */,
 				5940FB2A2AE92FBA007FBDEF /* CharacterGenerator.swift in Sources */,
