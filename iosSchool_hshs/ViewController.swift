@@ -14,5 +14,13 @@ class ViewController: UIViewController {
         let generator = ColorGenerator(alpha: 0.5)
         let superGenerator: ColorGeneratorProtocol = ColorGenerator(alpha: 1)
         print(superGenerator)
+
+        let generatorOne = ColorGenerator(alpha: 1)
+        generatorOne.changeColorCodes { colorCodes in
+            print(colorCodes)
+        }
+        generatorOne.changeColor {
+            [0, 100, 200]
+        }
     }
 }

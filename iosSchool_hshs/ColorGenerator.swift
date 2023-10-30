@@ -42,6 +42,29 @@ class ColorGenerator: ColorGeneratorProtocol {
     required init(alpha: Double) {
         self.alpha = alpha
     }
+
+    func changeColorCodes(completion: ([Double]) -> Void) {
+        completion([])
+    }
+
+    func changeColor(completion: () -> [Double]) {
+        colorCodes = completion()
+    }
+
+    func test() {
+        changeColorCodes { [weak self] newColorCodes in
+            self?.colorCodes = newColorCodes
+        }
+
+        changeColor { [weak self] in
+            guard let self else {
+                return []
+            }
+            self.colorCodes = [0, 1, 2, 3]
+            return self.colorCodes
+        }
+    }
+
     func createColor() -> UIColor {
         UIColor(white: 1, alpha: alpha)
     }
