@@ -99,7 +99,14 @@ class Character {
     }
 }
 
-class CharacterGenerator {
+protocol CharacterGeneratorProtocol {
+    var genderForName: [String: Character.Gender] { get }
+    var species: [String] { get }
+
+    func generate() -> Character
+}
+
+class CharacterGenerator: CharacterGeneratorProtocol {
     let genderForName: [String: Character.Gender] = [
             "Ivan": .male,
             "Anton": .male,
@@ -154,3 +161,6 @@ class CharacterGenerator {
     }
 
 }
+
+let characterGenerator: CharacterGeneratorProtocol = CharacterGenerator()
+let character = characterGenerator.generate().characterInfo()
