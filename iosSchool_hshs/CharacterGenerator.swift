@@ -161,6 +161,3 @@ class CharacterGenerator: CharacterGeneratorProtocol {
     }
 
 }
-
-let characterGenerator: CharacterGeneratorProtocol = CharacterGenerator()
-let character = characterGenerator.generate().characterInfo()
