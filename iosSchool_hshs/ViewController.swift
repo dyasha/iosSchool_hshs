@@ -22,5 +22,9 @@ class ViewController: UIViewController {
         generatorOne.changeColor {
             [0, 100, 200]
         }
+        let characterGenerator: CharacterGeneratorProtocol = CharacterGenerator()
+        let character = characterGenerator.generate().characterInfo()
+        let objectCharacterGenerator = CharacterGenerator().generate().characterInfo()
+        print(character, objectCharacterGenerator)
     }
 }
