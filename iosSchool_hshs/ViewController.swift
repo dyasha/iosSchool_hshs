@@ -26,5 +26,10 @@ class ViewController: UIViewController {
         let character = characterGenerator.generate().characterInfo()
         let objectCharacterGenerator = CharacterGenerator().generate().characterInfo()
         print(character, objectCharacterGenerator)
+
+        CharacterGenerator().generateNameOne(completion: { (name) -> Void in return print(name) })
+        CharacterGenerator().generateNameTwo(completion: {return "Ivan"})
+        CharacterGenerator().generateNameTree()("Olga")
+        print(CharacterGenerator().generateNameFour()())
     }
 }
