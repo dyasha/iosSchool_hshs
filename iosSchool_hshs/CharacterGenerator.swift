@@ -141,10 +141,6 @@ class CharacterGenerator: CharacterGeneratorProtocol {
         completion("Nick")
     }
 
-    func nameTwo() -> String {
-        return "Olga"
-    }
-    
     func generateNameTwo(completion: () -> (String)) {
         print(completion())
     }
