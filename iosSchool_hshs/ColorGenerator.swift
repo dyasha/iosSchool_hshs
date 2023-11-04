@@ -65,6 +65,27 @@ class ColorGenerator: ColorGeneratorProtocol {
         }
     }
 
+    func convertToArray<T>(element: T) -> [T] {
+        [element]
+    }
+
+    func printAlpha<Generator>(generator: Generator) where Generator: ColorGeneratorProtocol {
+        print(generator.alpha)
+    }
+
+    func printAlpha2<Generator: ColorGeneratorProtocol>(generator: Generator) {
+        print(generator.alpha)
+    }
+
+    func printAnyAlpha(generator: Any) {
+        let gen = generator as? ColorGeneratorProtocol
+
+        guard let generator = generator as? ColorGeneratorProtocol else {
+            return
+        }
+        print(generator.alpha)
+    }
+
     func createColor() -> UIColor {
         UIColor(white: 1, alpha: alpha)
     }
@@ -86,3 +107,11 @@ class ColorGenerator: ColorGeneratorProtocol {
             }
         }
     }
+
+class Palette<CustomColor> {
+    let colors: [CustomColor]
+
+    init(colors: [CustomColor]) {
+        self.colors = colors
+    }
+}
