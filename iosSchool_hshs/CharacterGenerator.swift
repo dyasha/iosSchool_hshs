@@ -146,11 +146,11 @@ class CharacterGenerator: CharacterGeneratorProtocol {
     }
 
     func generateNameTree() -> (String) -> Void {
-        return {name in print(name) }
+        { print($0) }
     }
 
     func generateNameFour() -> (() -> String) {
-        return {return "Gera"}
+        { "Gera" }
     }
 
    private func idGenerator() -> Int {
