@@ -22,16 +22,6 @@ class ViewController: UIViewController {
         generatorOne.changeColor {
             [0, 100, 200]
         }
-        let characterGenerator: CharacterGeneratorProtocol = CharacterGenerator()
-        let character = characterGenerator.generate().characterInfo()
-        let objectCharacterGenerator = CharacterGenerator().generate().characterInfo()
-        print(character, objectCharacterGenerator)
-
-        CharacterGenerator().generateNameOne(completion: { print($0) })
-        CharacterGenerator().generateNameTwo(completion: { "Ivan" })
-        CharacterGenerator().generateNameTree()("Olga")
-        print(CharacterGenerator().generateNameFour()())
-
         let color = Color(red: 1, green: 1, blue: 1)
         let intArray = generator.convertToArray(element: 1)
         let colorArr = generator.convertToArray(element: color)
