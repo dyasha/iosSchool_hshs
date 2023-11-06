@@ -12,4 +12,8 @@ class Assembly {
     func coloerGenerator(alpha: Double) -> ColorGenerator {
         ColorGenerator(alpha: alpha)
     }
+
+    func appCoordinator() -> AppCoordinator {
+        AppCoordinator(assemlby: self, context: .init())
+    }
 }
