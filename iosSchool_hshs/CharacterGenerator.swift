@@ -137,6 +137,22 @@ class CharacterGenerator: CharacterGeneratorProtocol {
         )
     }
 
+    func generateNameOne(completion: (String) -> Void) {
+        completion("Nick")
+    }
+
+    func generateNameTwo(completion: () -> (String)) {
+        print(completion())
+    }
+
+    func generateNameTree() -> (String) -> Void {
+        { print($0) }
+    }
+
+    func generateNameFour() -> (() -> String) {
+        { "Gera" }
+    }
+
    private func idGenerator() -> Int {
         return Int.random(in: 1...100)
     }

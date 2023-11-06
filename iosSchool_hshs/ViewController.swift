@@ -27,6 +27,11 @@ class ViewController: UIViewController {
         let objectCharacterGenerator = CharacterGenerator().generate().characterInfo()
         print(character, objectCharacterGenerator)
 
+        CharacterGenerator().generateNameOne(completion: { print($0) })
+        CharacterGenerator().generateNameTwo(completion: { "Ivan" })
+        CharacterGenerator().generateNameTree()("Olga")
+        print(CharacterGenerator().generateNameFour()())
+
         let color = Color(red: 1, green: 1, blue: 1)
         let intArray = generator.convertToArray(element: 1)
         let colorArr = generator.convertToArray(element: color)
