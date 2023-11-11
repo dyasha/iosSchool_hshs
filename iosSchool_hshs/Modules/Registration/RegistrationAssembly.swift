@@ -9,16 +9,16 @@ import Foundation
 
 protocol RegistrationAssembly {
     func registrationVC() -> RegistrationViewController
-    func dataProvider() -> RegistrationDataProvider
+    func registrationDataProvider() -> RegistrationDataProvider
     func registrationCoordinator() -> RegistrationCoordinator
 }
 
 extension Assembly: RegistrationAssembly {
     func registrationVC() -> RegistrationViewController {
-        .init(dataProvider: dataProvider())
+        .init(registrationDataProvider: registrationDataProvider())
     }
 
-    func dataProvider() -> RegistrationDataProvider {
+    func registrationDataProvider() -> RegistrationDataProvider {
         RegistrationDataProviderImp()
     }
 

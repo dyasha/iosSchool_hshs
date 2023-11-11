@@ -8,10 +8,10 @@
 import UIKit
 
 class RegistrationViewController: UIViewController {
-    private let dataProvider: RegistrationDataProvider
+    private let registrationDataProvider: RegistrationDataProvider
 
-    init(dataProvider: RegistrationDataProvider) {
-        self.dataProvider = dataProvider
+    init(registrationDataProvider: RegistrationDataProvider) {
+        self.registrationDataProvider = registrationDataProvider
 
         super.init(nibName: nil, bundle: nil)
     }
