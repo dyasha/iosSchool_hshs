@@ -12,7 +12,7 @@ class SplashViewController: UIViewController {
     private let dataProvider: SplashDataProvider
     private let onSuccess: (() -> Void)?
 
-    init(dataProvider: SplashDataProvider,onSuccess: (() -> Void)?) {
+    init(dataProvider: SplashDataProvider, onSuccess: (() -> Void)?) {
         self.dataProvider = dataProvider
         self.onSuccess = onSuccess
 
