@@ -102,8 +102,9 @@ class Character {
 protocol CharacterGeneratorProtocol {
     var genderForName: [String: Character.Gender] { get }
     var species: [String] { get }
+    var episodes: [String] { get }
 
-    func generate() -> Character
+    func generate(name: String?, episodes: [String]?) -> Character
 }
 
 class CharacterGenerator: CharacterGeneratorProtocol {
@@ -123,15 +124,24 @@ class CharacterGenerator: CharacterGeneratorProtocol {
         "Elf"
     ]
 
-    func generate() -> Character {
-        let name = nameGenerator()
+    let episodes: [String] = [
+        "Smile",
+        "Scream",
+        "Smoke Signal",
+        "Old Story",
+        "Thunder Spears"
+    ]
+
+    func generate(name: String? = nil, episodes episode: [String]? = nil) -> Character {
+        let name = name ?? nameGenerator()
+        let episodes = episode ?? episodes
         return Character(
             id: idGenerator(),
             name: name,
             species: speciesGenerator(),
             image: "Not image now.",
             url: "Not URL now",
-            episode: ["1", "2"],
+            episode: episodes,
             gender: genderGenerator(name: name),
             status: statusGenerator()
         )

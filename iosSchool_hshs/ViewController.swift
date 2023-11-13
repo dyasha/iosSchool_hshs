@@ -54,5 +54,19 @@ class ViewController: UIViewController {
         let test2 = test1.compactMap { $0 }
         let test3 = test1.compactMap { $0?.alpha }
         let test4 = test1.map { $0?.alpha }
+
+        var charactersArray: [Character] = (0...9).map { _ in
+            CharacterGenerator().generate()
+        }
+        let males = charactersArray.filter { $0.gender == .male }
+        let containsA = charactersArray.filter { $0.name.lowercased().contains("a") }
+        let generateForNames = CharacterGenerator().genderForName.keys.map { CharacterGenerator().generate(name: $0) }
+        let generateForEpisodes = (0...2).map { _ in
+            CharacterGenerator().episodes.map { CharacterGenerator().generate(episodes: [$0]) }
+        }
+        let generateForEpisodesCompactMap = (0...2).map { _ in
+            CharacterGenerator().episodes.compactMap { CharacterGenerator().generate(episodes: [$0]) }
+        }
+        let summCharactersName = charactersArray.reduce(String(), { $0 + $1.name })
     }
 }
