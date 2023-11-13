@@ -127,6 +127,8 @@
 				59CE14772AFE1FA700C49AE9 /* RegistrationCoordinator.swift */,
 			);
 			path = Registration;
+            sourceTree = "<group>";
+        };
 		598959952AFD128800C36DC9 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
