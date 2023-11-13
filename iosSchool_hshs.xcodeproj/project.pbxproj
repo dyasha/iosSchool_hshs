@@ -15,6 +15,12 @@
 		5951D7082AE8211D0042C0EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5951D7062AE8211D0042C0EB /* LaunchScreen.storyboard */; };
 		5951D7102AE8267B0042C0EB /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D70F2AE8267B0042C0EB /* ColorGenerator.swift */; };
 		596018F62AEAA5CE00AB04A5 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596018F52AEAA5CE00AB04A5 /* Assembly.swift */; };
+		59CE146E2AFE195900C49AE9 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE146D2AFE195900C49AE9 /* RegistrationViewController.swift */; };
+		59CE14702AFE1AD300C49AE9 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE146F2AFE1AD300C49AE9 /* RegistrationView.swift */; };
+		59CE14722AFE1BDB00C49AE9 /* RegistrationViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE14712AFE1BDB00C49AE9 /* RegistrationViewData.swift */; };
+		59CE14742AFE1C1A00C49AE9 /* RegistrationDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE14732AFE1C1A00C49AE9 /* RegistrationDataProvider.swift */; };
+		59CE14762AFE1CA700C49AE9 /* RegistrationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE14752AFE1CA700C49AE9 /* RegistrationAssembly.swift */; };
+		59CE14782AFE1FA700C49AE9 /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE14772AFE1FA700C49AE9 /* RegistrationCoordinator.swift */; };
 		598959972AFD12A400C36DC9 /* SplashDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598959962AFD12A400C36DC9 /* SplashDataProvider.swift */; };
 		598959992AFD12FD00C36DC9 /* SplashViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598959982AFD12FD00C36DC9 /* SplashViewData.swift */; };
 		5989599B2AFD132300C36DC9 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5989599A2AFD132300C36DC9 /* SplashView.swift */; };
@@ -42,6 +48,12 @@
 		5951D7092AE8211D0042C0EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5951D70F2AE8267B0042C0EB /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
 		596018F52AEAA5CE00AB04A5 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		59CE146D2AFE195900C49AE9 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		59CE146F2AFE1AD300C49AE9 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		59CE14712AFE1BDB00C49AE9 /* RegistrationViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewData.swift; sourceTree = "<group>"; };
+		59CE14732AFE1C1A00C49AE9 /* RegistrationDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDataProvider.swift; sourceTree = "<group>"; };
+		59CE14752AFE1CA700C49AE9 /* RegistrationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAssembly.swift; sourceTree = "<group>"; };
+		59CE14772AFE1FA700C49AE9 /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
 		598959962AFD12A400C36DC9 /* SplashDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDataProvider.swift; sourceTree = "<group>"; };
 		598959982AFD12FD00C36DC9 /* SplashViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewData.swift; sourceTree = "<group>"; };
 		5989599A2AFD132300C36DC9 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -104,6 +116,17 @@
 			path = iosSchool_hshs;
 			sourceTree = "<group>";
 		};
+		59CE146C2AFE190E00C49AE9 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				59CE146D2AFE195900C49AE9 /* RegistrationViewController.swift */,
+				59CE146F2AFE1AD300C49AE9 /* RegistrationView.swift */,
+				59CE14712AFE1BDB00C49AE9 /* RegistrationViewData.swift */,
+				59CE14732AFE1C1A00C49AE9 /* RegistrationDataProvider.swift */,
+				59CE14752AFE1CA700C49AE9 /* RegistrationAssembly.swift */,
+				59CE14772AFE1FA700C49AE9 /* RegistrationCoordinator.swift */,
+			);
+			path = Registration;
 		598959952AFD128800C36DC9 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +143,7 @@
 		59CE9CC82AF9222E00E5A110 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				59CE146C2AFE190E00C49AE9 /* Registration */,
 				598959952AFD128800C36DC9 /* Splash */,
 				59CE9CC92AF9225300E5A110 /* Auth */,
 			);
@@ -237,18 +261,24 @@
 				5989599B2AFD132300C36DC9 /* SplashView.swift in Sources */,
 				5989599F2AFD138400C36DC9 /* SplashViewController.swift in Sources */,
 				5951D7102AE8267B0042C0EB /* ColorGenerator.swift in Sources */,
+				59CE14782AFE1FA700C49AE9 /* RegistrationCoordinator.swift in Sources */,
 				598959A12AFD141700C36DC9 /* SplashCoordinator.swift in Sources */,
 				59CE9CC52AF9185C00E5A110 /* BaseCoordinator.swift in Sources */,
 				59CE9CD52AF9261800E5A110 /* AuthCoordinator.swift in Sources */,
+				59CE14762AFE1CA700C49AE9 /* RegistrationAssembly.swift in Sources */,
 				59CE9CC72AF9194000E5A110 /* AppCoordinator.swift in Sources */,
 				5951D6FC2AE8211B0042C0EB /* AppDelegate.swift in Sources */,
+				59CE14702AFE1AD300C49AE9 /* RegistrationView.swift in Sources */,
 				59CE9CCF2AF9242B00E5A110 /* AuthViewData.swift in Sources */,
 				59CE9CCD2AF9230D00E5A110 /* AuthView.swift in Sources */,
+				59CE146E2AFE195900C49AE9 /* RegistrationViewController.swift in Sources */,
 				59CE9CD12AF9245800E5A110 /* AuthDataProvider.swift in Sources */,
 				5940FB2A2AE92FBA007FBDEF /* CharacterGenerator.swift in Sources */,
 				59CE9CCB2AF922E900E5A110 /* AuthViewController.swift in Sources */,
 				5951D6FE2AE8211B0042C0EB /* SceneDelegate.swift in Sources */,
+				59CE14742AFE1C1A00C49AE9 /* RegistrationDataProvider.swift in Sources */,
 				59CE9CD32AF9249600E5A110 /* AuthAssembly.swift in Sources */,
+				59CE14722AFE1BDB00C49AE9 /* RegistrationViewData.swift in Sources */,
 				598959972AFD12A400C36DC9 /* SplashDataProvider.swift in Sources */,
 				598959A32AFD147300C36DC9 /* SplashAssembly.swift in Sources */,
 				598959992AFD12FD00C36DC9 /* SplashViewData.swift in Sources */,
