@@ -23,5 +23,13 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 255/255, green: 182/255, blue: 193/255, alpha: 1.0)
+        registration()
+    }
+
+    func registration() {
+        registrationDataProvider.registration(username: "maybeusertest", password: "12345678") {token, error in
+            print(token ?? "Токена нет")
+            print(error?.rawValue ?? "Нет ошибки")
+        }
     }
 }

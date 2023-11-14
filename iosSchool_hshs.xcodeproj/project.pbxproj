@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590BD9922B039378002BE87C /* RegistrationApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590BD9912B039378002BE87C /* RegistrationApiClient.swift */; };
 		59134BF82B025154000EA580 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134BF72B025154000EA580 /* Location.swift */; };
 		59134BFA2B0259CC000EA580 /* LocationsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134BF92B0259CC000EA580 /* LocationsList.swift */; };
 		59134BFC2B025A3E000EA580 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134BFB2B025A3E000EA580 /* TokenResponse.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		590BD9912B039378002BE87C /* RegistrationApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationApiClient.swift; sourceTree = "<group>"; };
 		59134BF72B025154000EA580 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		59134BF92B0259CC000EA580 /* LocationsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsList.swift; sourceTree = "<group>"; };
 		59134BFB2B025A3E000EA580 /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				59134C002B025B60000EA580 /* NetworkConstants.swift */,
 				59134C022B025CB7000EA580 /* ApiError.swift */,
 				59134C042B026011000EA580 /* AuthApiClient.swift */,
+				590BD9912B039378002BE87C /* RegistrationApiClient.swift */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				59CE9CD32AF9249600E5A110 /* AuthAssembly.swift in Sources */,
 				59CE14722AFE1BDB00C49AE9 /* RegistrationViewData.swift in Sources */,
 				598959972AFD12A400C36DC9 /* SplashDataProvider.swift in Sources */,
+				590BD9922B039378002BE87C /* RegistrationApiClient.swift in Sources */,
 				598959A32AFD147300C36DC9 /* SplashAssembly.swift in Sources */,
 				598959992AFD12FD00C36DC9 /* SplashViewData.swift in Sources */,
 				59134BFF2B025AF6000EA580 /* ApiClient.swift in Sources */,
