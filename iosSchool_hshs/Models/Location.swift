@@ -11,15 +11,15 @@ struct Location: Codable {
     let id: Int
     let name: String
     let type: String
-    let residents: [String]
     let dim: String
+    let residents: [String]
 
     enum CodingKeys: String, CodingKey {
         case id
         case name
         case type
-        case residents
         case dim = "dimention"
+        case residents
     }
 
     init(from decoder: Decoder) throws {

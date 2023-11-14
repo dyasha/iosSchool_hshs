@@ -8,7 +8,6 @@
 import Foundation
 
 protocol RegistrationApiClient {
-
     func registration (
         username: String,
         password: String,
@@ -17,14 +16,12 @@ protocol RegistrationApiClient {
 }
 
 extension ApiClient: RegistrationApiClient {
-
     func registration (
         username: String,
         password: String,
         onRequestCompleted: @escaping (TokenResponse?, ApiError?) -> Void
     ) {
-        let data = ["username": username, "password": password]
-        let dataToJSON = try? JSONSerialization.data(withJSONObject: data)
+        let dataToJSON = try? JSONSerialization.data(withJSONObject: ["username": username, "password": password])
         let url = NetworkConstants.URLStrings.nanoPost + "/auth/register"
         performRequest(url: url, data: dataToJSON, method: .post) { (result: Result<TokenResponse, ApiError>) in
             switch result {
