@@ -27,7 +27,7 @@ class RegistrationViewController: UIViewController {
     }
 
     func registration() {
-        registrationDataProvider.registration(username: "maybeusertest", password: "12345678") {token, error in
+        registrationDataProvider.registration(username: "maybeusertest", password: "12345678") { token, error in
             print(token ?? "Токена нет")
             print(error?.rawValue ?? "Нет ошибки")
         }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Character {
+class Characters {
     enum Gender: String, CaseIterable {
         case female = "Female"
         case male = "Male"
@@ -79,15 +79,15 @@ class Character {
 }
 
 protocol CharacterGeneratorProtocol {
-    var genderForName: [String: Character.Gender] { get }
+    var genderForName: [String: Characters.Gender] { get }
     var species: [String] { get }
     var episodes: [String] { get }
 
-    func generate(name: String?, episodes: [String]?) -> Character
+    func generate(name: String?, episodes: [String]?) -> Characters
 }
 
 class CharacterGenerator: CharacterGeneratorProtocol {
-    let genderForName: [String: Character.Gender] = [
+    let genderForName: [String: Characters.Gender] = [
             "Ivan": .male,
             "Anton": .male,
             "Egor": .male,
@@ -111,10 +111,10 @@ class CharacterGenerator: CharacterGeneratorProtocol {
         "Thunder Spears"
     ]
 
-    func generate(name: String? = nil, episodes episode: [String]? = nil) -> Character {
+    func generate(name: String? = nil, episodes episode: [String]? = nil) -> Characters {
         let name = name ?? nameGenerator()
         let episodes = episode ?? episodes
-        return Character(
+        return Characters(
             id: idGenerator(),
             name: name,
             species: speciesGenerator(),
@@ -154,15 +154,15 @@ class CharacterGenerator: CharacterGeneratorProtocol {
         return species.randomElement() ?? "speciesError"
     }
 
-    private func genderGenerator(name: String) -> Character.Gender {
+    private func genderGenerator(name: String) -> Characters.Gender {
         guard Bool.random() else {
-            return Character.Gender.allCases.randomElement() ?? .unknown
+            return Characters.Gender.allCases.randomElement() ?? .unknown
         }
         return genderForName[name] ?? .unknown
     }
 
-    private func statusGenerator() -> Character.Status {
-        return Character.Status.allCases.randomElement() ?? .unknown
+    private func statusGenerator() -> Characters.Status {
+        return Characters.Status.allCases.randomElement() ?? .unknown
     }
 
 }

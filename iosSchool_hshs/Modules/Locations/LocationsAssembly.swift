@@ -19,7 +19,7 @@ extension Assembly: LocationsAssembly {
     }
 
     func locationsDataProvider() -> LocationsDataProvider {
-        LocationsDataProviderImp(apiClient: apiClient)
+        LocationsDataProviderImp(locationsApiClient: apiClient)
     }
 
     func locationsCoordinator() -> LocationsCoordinator {

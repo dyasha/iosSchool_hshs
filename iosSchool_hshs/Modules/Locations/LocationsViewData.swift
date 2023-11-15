@@ -7,4 +7,5 @@
 
 import Foundation
 
-struct LocationsViewData {}
+struct LocationsViewData {
+}

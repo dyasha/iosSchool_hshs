@@ -18,7 +18,7 @@ struct Location: Codable {
         case id
         case name
         case type
-        case dim = "dimention"
+        case dim = "dimension"
         case residents
     }
 
@@ -33,7 +33,6 @@ struct Location: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-
     }
 
 }

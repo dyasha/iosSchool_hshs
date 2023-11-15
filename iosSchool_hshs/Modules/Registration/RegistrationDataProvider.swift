@@ -18,10 +18,10 @@ protocol RegistrationDataProvider {
 
 class RegistrationDataProviderImp: RegistrationDataProvider {
 
-    private let apiClient: RegistrationApiClient
+    private let registrationApiClient: RegistrationApiClient
 
-    init(apiClient: RegistrationApiClient) {
-        self.apiClient = apiClient
+    init(registrationApiClient: RegistrationApiClient) {
+        self.registrationApiClient = registrationApiClient
     }
 
     func registration(
@@ -29,7 +29,10 @@ class RegistrationDataProviderImp: RegistrationDataProvider {
         password: String,
         onRequestCompleted: @escaping (TokenResponse?, ApiError?) -> Void
     ) {
-        apiClient.registration(username: username, password: password, onRequestCompleted: onRequestCompleted)
+        registrationApiClient.registration(
+            username: username,
+            password: password,
+            onRequestCompleted: onRequestCompleted
+        )
     }
-
 }

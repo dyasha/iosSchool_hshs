@@ -12,13 +12,13 @@ protocol LocationsDataProvider {
 }
 
 class LocationsDataProviderImp: LocationsDataProvider {
-    private let apiClient: LocationsApiClient
+    private let locationsApiClient: LocationsApiClient
 
-    init(apiClient: LocationsApiClient) {
-        self.apiClient = apiClient
+    init(locationsApiClient: LocationsApiClient) {
+        self.locationsApiClient = locationsApiClient
     }
 
     func getLocations(onRequestCompleted: @escaping (LocationsList?, ApiError?) -> Void) {
-        apiClient.getLocations(onRequestCompleted: onRequestCompleted)
+        locationsApiClient.getLocations(onRequestCompleted: onRequestCompleted)
     }
 }
