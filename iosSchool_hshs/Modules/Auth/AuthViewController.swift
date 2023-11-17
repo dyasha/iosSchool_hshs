@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AuthViewController: UIViewController {
+class AuthViewController<View: AuthView>: BaseViewController<View> {
 
     private let dataProvider: AuthDataProvider
 
@@ -24,7 +24,7 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .red
+        rootView.setView()
         login()
     }
 
