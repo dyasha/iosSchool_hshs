@@ -8,7 +8,14 @@
 import UIKit
 
 protocol RegistrationView: UIView {
+    func setView()
 }
 
 class RegistrationViewImp: UIView, RegistrationView {
+    @IBOutlet private var imageView: UIImageView!
+
+    func setView() {
+        imageView.image = UIImage(named: "registration-foreground")
+        imageView.contentMode = .scaleAspectFill
+    }
 }

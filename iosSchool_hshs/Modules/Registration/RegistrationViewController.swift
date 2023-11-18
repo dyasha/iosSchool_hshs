@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController<View: RegistrationView>: BaseViewController<View> {
     private let registrationDataProvider: RegistrationDataProvider
 
     init(registrationDataProvider: RegistrationDataProvider) {
@@ -22,6 +22,7 @@ class RegistrationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 255/255, green: 182/255, blue: 193/255, alpha: 1.0)
+
+        rootView.setView()
     }
 }

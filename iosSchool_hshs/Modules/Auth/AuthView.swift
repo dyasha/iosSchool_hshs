@@ -51,8 +51,4 @@ class AuthViewImp: UIView, AuthView {
         registrationButton.layer.masksToBounds = true
 
     }
-
-    @IBAction func login(sender: UIButton) {
-        
-    }
 }

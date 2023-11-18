@@ -17,6 +17,7 @@
 		59134C032B025CB7000EA580 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134C022B025CB7000EA580 /* ApiError.swift */; };
 		59134C052B026011000EA580 /* AuthApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134C042B026011000EA580 /* AuthApiClient.swift */; };
 		5940FB2A2AE92FBA007FBDEF /* CharacterGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5940FB292AE92FBA007FBDEF /* CharacterGenerator.swift */; };
+		5944C00F2B07BA5E006D7FB7 /* RegistrationViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5944C00E2B07BA5E006D7FB7 /* RegistrationViewImp.xib */; };
 		5951D6FC2AE8211B0042C0EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */; };
 		5951D6FE2AE8211B0042C0EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */; };
 		5951D7002AE8211B0042C0EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FF2AE8211B0042C0EB /* ViewController.swift */; };
@@ -57,6 +58,7 @@
 		59134C022B025CB7000EA580 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		59134C042B026011000EA580 /* AuthApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApiClient.swift; sourceTree = "<group>"; };
 		5940FB292AE92FBA007FBDEF /* CharacterGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterGenerator.swift; sourceTree = "<group>"; };
+		5944C00E2B07BA5E006D7FB7 /* RegistrationViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewImp.xib; sourceTree = "<group>"; };
 		5951D6F82AE8211B0042C0EB /* iosSchool_hshs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool_hshs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,14 @@
 			path = ApiClient;
 			sourceTree = "<group>";
 		};
+		5944C00D2B07BA3A006D7FB7 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				5944C00E2B07BA5E006D7FB7 /* RegistrationViewImp.xib */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		5951D6EF2AE8211B0042C0EB = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +200,7 @@
 		59CE146C2AFE190E00C49AE9 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				5944C00D2B07BA3A006D7FB7 /* Subviews */,
 				59CE146D2AFE195900C49AE9 /* RegistrationViewController.swift */,
 				59CE146F2AFE1AD300C49AE9 /* RegistrationView.swift */,
 				59CE14712AFE1BDB00C49AE9 /* RegistrationViewData.swift */,
@@ -283,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5944C00F2B07BA5E006D7FB7 /* RegistrationViewImp.xib in Resources */,
 				5951D7082AE8211D0042C0EB /* LaunchScreen.storyboard in Resources */,
 				5951D7052AE8211D0042C0EB /* Assets.xcassets in Resources */,
 				59090F6D2B0642E900455440 /* AuthViewImp.xib in Resources */,
