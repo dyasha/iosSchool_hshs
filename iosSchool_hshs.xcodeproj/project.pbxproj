@@ -22,10 +22,8 @@
 		59134C012B025B60000EA580 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134C002B025B60000EA580 /* NetworkConstants.swift */; };
 		59134C032B025CB7000EA580 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134C022B025CB7000EA580 /* ApiError.swift */; };
 		59134C052B026011000EA580 /* AuthApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134C042B026011000EA580 /* AuthApiClient.swift */; };
-		5940FB2A2AE92FBA007FBDEF /* CharacterGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5940FB292AE92FBA007FBDEF /* CharacterGenerator.swift */; };
 		5951D6FC2AE8211B0042C0EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */; };
 		5951D6FE2AE8211B0042C0EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */; };
-		5951D7002AE8211B0042C0EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FF2AE8211B0042C0EB /* ViewController.swift */; };
 		5951D7052AE8211D0042C0EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5951D7042AE8211D0042C0EB /* Assets.xcassets */; };
 		5951D7082AE8211D0042C0EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5951D7062AE8211D0042C0EB /* LaunchScreen.storyboard */; };
 		5951D7102AE8267B0042C0EB /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D70F2AE8267B0042C0EB /* ColorGenerator.swift */; };
@@ -76,11 +74,9 @@
 		59134C002B025B60000EA580 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		59134C022B025CB7000EA580 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		59134C042B026011000EA580 /* AuthApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApiClient.swift; sourceTree = "<group>"; };
-		5940FB292AE92FBA007FBDEF /* CharacterGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterGenerator.swift; sourceTree = "<group>"; };
 		5951D6F82AE8211B0042C0EB /* iosSchool_hshs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool_hshs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5951D6FF2AE8211B0042C0EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5951D7042AE8211D0042C0EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5951D7072AE8211D0042C0EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5951D7092AE8211D0042C0EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -187,11 +183,9 @@
 				59134BFD2B025AE2000EA580 /* ApiClient */,
 				59134BF62B02511B000EA580 /* Models */,
 				59CE9CC82AF9222E00E5A110 /* Modules */,
-				5940FB292AE92FBA007FBDEF /* CharacterGenerator.swift */,
 				5951D70F2AE8267B0042C0EB /* ColorGenerator.swift */,
 				5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */,
 				5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */,
-				5951D6FF2AE8211B0042C0EB /* ViewController.swift */,
 				5951D7042AE8211D0042C0EB /* Assets.xcassets */,
 				5951D7062AE8211D0042C0EB /* LaunchScreen.storyboard */,
 				5951D7092AE8211D0042C0EB /* Info.plist */,
@@ -359,7 +353,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5951D7002AE8211B0042C0EB /* ViewController.swift in Sources */,
 				596018F62AEAA5CE00AB04A5 /* Assembly.swift in Sources */,
 				5989599B2AFD132300C36DC9 /* SplashView.swift in Sources */,
 				59134C052B026011000EA580 /* AuthApiClient.swift in Sources */,
@@ -388,7 +381,6 @@
 				59BFBFC12B05056E000F3925 /* CharactersView.swift in Sources */,
 				59CE146E2AFE195900C49AE9 /* RegistrationViewController.swift in Sources */,
 				59CE9CD12AF9245800E5A110 /* AuthDataProvider.swift in Sources */,
-				5940FB2A2AE92FBA007FBDEF /* CharacterGenerator.swift in Sources */,
 				59134BF82B025154000EA580 /* Location.swift in Sources */,
 				59CE9CCB2AF922E900E5A110 /* AuthViewController.swift in Sources */,
 				5951D6FE2AE8211B0042C0EB /* SceneDelegate.swift in Sources */,

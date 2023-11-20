@@ -27,8 +27,8 @@ struct Location: Codable {
         self.id = try container.decode(Int.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
         self.type = try container.decode(String.self, forKey: .type)
-        self.residents = (try? container.decode([String].self, forKey: .residents)) ?? []
         self.dim = try container.decode(String.self, forKey: .dim)
+        self.residents = (try? container.decode([String].self, forKey: .residents)) ?? []
     }
 
     func encode(to encoder: Encoder) throws {
