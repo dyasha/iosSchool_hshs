@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registration-background" translatesAutoresizingMaskIntoConstraints="NO" id="BRW-7m-bm0">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registration-background" translatesAutoresizingMaskIntoConstraints="NO" id="BRW-7m-bm0">
                     <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registration-foreground" translatesAutoresizingMaskIntoConstraints="NO" id="P5t-C4-I5b">
