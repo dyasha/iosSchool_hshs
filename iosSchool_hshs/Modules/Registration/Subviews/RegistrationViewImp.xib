@@ -14,6 +14,9 @@
             <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registration-background" translatesAutoresizingMaskIntoConstraints="NO" id="BRW-7m-bm0">
+                    <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registration-foreground" translatesAutoresizingMaskIntoConstraints="NO" id="P5t-C4-I5b">
                     <rect key="frame" x="140" y="336" width="150" height="126"/>
                 </imageView>
@@ -67,6 +70,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <constraints>
                 <constraint firstItem="ALm-8s-Wob" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Fg3-a8-k6U" secondAttribute="bottom" constant="127" id="01k-a3-Eel"/>
+                <constraint firstItem="BRW-7m-bm0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1dL-fm-NPe"/>
                 <constraint firstItem="P5t-C4-I5b" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="140" id="3PU-bU-Itg"/>
                 <constraint firstItem="aVj-KN-pzG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" priority="500" constant="220" id="5lv-OE-ntI"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Fg3-a8-k6U" secondAttribute="trailing" constant="32" id="5pw-lI-8m4"/>
@@ -75,7 +79,9 @@
                 <constraint firstItem="Fg3-a8-k6U" firstAttribute="top" secondItem="TKl-gs-Cz3" secondAttribute="bottom" constant="18" id="DYY-Wz-af2"/>
                 <constraint firstItem="miN-g3-brm" firstAttribute="top" secondItem="P5t-C4-I5b" secondAttribute="bottom" constant="36" id="IjA-wg-fm1"/>
                 <constraint firstItem="ALm-8s-Wob" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Kpx-je-vId"/>
+                <constraint firstItem="BRW-7m-bm0" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="NTh-Ju-tYq"/>
                 <constraint firstItem="P5t-C4-I5b" firstAttribute="top" secondItem="aVj-KN-pzG" secondAttribute="bottom" constant="30" id="RH2-7v-S2V"/>
+                <constraint firstItem="BRW-7m-bm0" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="RX1-EG-LeO"/>
                 <constraint firstItem="zML-IF-tAn" firstAttribute="top" secondItem="ALm-8s-Wob" secondAttribute="bottom" constant="12" id="RcA-Dy-rH1"/>
                 <constraint firstItem="zML-IF-tAn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="YRH-Ym-pLh"/>
                 <constraint firstItem="Fg3-a8-k6U" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="YmY-qh-MWC"/>
@@ -88,6 +94,7 @@
                 <constraint firstItem="TKl-gs-Cz3" firstAttribute="top" secondItem="miN-g3-brm" secondAttribute="bottom" constant="18" id="sPg-nd-1ko"/>
                 <constraint firstItem="aVj-KN-pzG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="120" id="tOh-kK-lpU"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zML-IF-tAn" secondAttribute="bottom" constant="46" id="wfr-d0-Upz"/>
+                <constraint firstAttribute="top" secondItem="BRW-7m-bm0" secondAttribute="top" id="yw0-Rd-5Oq"/>
             </constraints>
             <connections>
                 <outlet property="backButton" destination="zML-IF-tAn" id="Ep7-pD-GgT"/>
@@ -102,6 +109,7 @@
         </view>
     </objects>
     <resources>
+        <image name="registration-background" width="390" height="844"/>
         <image name="registration-foreground" width="126" height="126"/>
     </resources>
 </document>
