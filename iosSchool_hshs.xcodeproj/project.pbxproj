@@ -138,6 +138,8 @@
 				590BD9A02B03B26C002BE87C /* LocationsCoordinator.swift */,
 			);
 			path = Locations;
+            sourceTree = "<group>";
+        };
 		59090F682B06407000455440 /* Common */ = {
 			isa = PBXGroup;
 			children = (
