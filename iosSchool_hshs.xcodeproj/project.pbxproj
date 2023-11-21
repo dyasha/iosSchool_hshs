@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590BD9922B039378002BE87C /* RegistrationApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590BD9912B039378002BE87C /* RegistrationApiClient.swift */; };
+		590BD9942B03B1CE002BE87C /* LocationsApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590BD9932B03B1CE002BE87C /* LocationsApiClient.swift */; };
+		590BD9972B03B21C002BE87C /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590BD9962B03B21C002BE87C /* LocationsViewController.swift */; };
+		590BD9992B03B228002BE87C /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590BD9982B03B228002BE87C /* LocationsView.swift */; };
+		590BD99B2B03B233002BE87C /* LocationsViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590BD99A2B03B233002BE87C /* LocationsViewData.swift */; };
+		590BD99D2B03B240002BE87C /* LocationsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590BD99C2B03B240002BE87C /* LocationsDataProvider.swift */; };
+		590BD99F2B03B257002BE87C /* LocationsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590BD99E2B03B257002BE87C /* LocationsAssembly.swift */; };
+		590BD9A12B03B26C002BE87C /* LocationsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590BD9A02B03B26C002BE87C /* LocationsCoordinator.swift */; };
 		59090F6A2B0640A200455440 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59090F692B0640A200455440 /* BaseViewController.swift */; };
 		59090F6D2B0642E900455440 /* AuthViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59090F6C2B0642E900455440 /* AuthViewImp.xib */; };
 		59134BF82B025154000EA580 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134BF72B025154000EA580 /* Location.swift */; };
@@ -16,10 +24,8 @@
 		59134C012B025B60000EA580 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134C002B025B60000EA580 /* NetworkConstants.swift */; };
 		59134C032B025CB7000EA580 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134C022B025CB7000EA580 /* ApiError.swift */; };
 		59134C052B026011000EA580 /* AuthApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134C042B026011000EA580 /* AuthApiClient.swift */; };
-		5940FB2A2AE92FBA007FBDEF /* CharacterGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5940FB292AE92FBA007FBDEF /* CharacterGenerator.swift */; };
 		5951D6FC2AE8211B0042C0EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */; };
 		5951D6FE2AE8211B0042C0EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */; };
-		5951D7002AE8211B0042C0EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FF2AE8211B0042C0EB /* ViewController.swift */; };
 		5951D7052AE8211D0042C0EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5951D7042AE8211D0042C0EB /* Assets.xcassets */; };
 		5951D7082AE8211D0042C0EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5951D7062AE8211D0042C0EB /* LaunchScreen.storyboard */; };
 		5951D7102AE8267B0042C0EB /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D70F2AE8267B0042C0EB /* ColorGenerator.swift */; };
@@ -30,6 +36,14 @@
 		5989599F2AFD138400C36DC9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5989599E2AFD138400C36DC9 /* SplashViewController.swift */; };
 		598959A12AFD141700C36DC9 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598959A02AFD141700C36DC9 /* SplashCoordinator.swift */; };
 		598959A32AFD147300C36DC9 /* SplashAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598959A22AFD147300C36DC9 /* SplashAssembly.swift */; };
+		59BFBFBF2B05055B000F3925 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFBFBE2B05055B000F3925 /* CharactersViewController.swift */; };
+		59BFBFC12B05056E000F3925 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFBFC02B05056E000F3925 /* CharactersView.swift */; };
+		59BFBFC32B050583000F3925 /* CharactersViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFBFC22B050583000F3925 /* CharactersViewData.swift */; };
+		59BFBFC52B050590000F3925 /* CharactersDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFBFC42B050590000F3925 /* CharactersDataProvider.swift */; };
+		59BFBFC72B0505A0000F3925 /* CharactersAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFBFC62B0505A0000F3925 /* CharactersAssembly.swift */; };
+		59BFBFC92B0505B0000F3925 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFBFC82B0505B0000F3925 /* CharactersCoordinator.swift */; };
+		59BFBFCB2B050A42000F3925 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFBFCA2B050A42000F3925 /* Character.swift */; };
+		59BFBFCD2B050E1D000F3925 /* CharacterApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFBFCC2B050E1D000F3925 /* CharacterApiClient.swift */; };
 		59CE146E2AFE195900C49AE9 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE146D2AFE195900C49AE9 /* RegistrationViewController.swift */; };
 		59CE14702AFE1AD300C49AE9 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE146F2AFE1AD300C49AE9 /* RegistrationView.swift */; };
 		59CE14722AFE1BDB00C49AE9 /* RegistrationViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CE14712AFE1BDB00C49AE9 /* RegistrationViewData.swift */; };
@@ -47,6 +61,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		590BD9912B039378002BE87C /* RegistrationApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationApiClient.swift; sourceTree = "<group>"; };
+		590BD9932B03B1CE002BE87C /* LocationsApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsApiClient.swift; sourceTree = "<group>"; };
+		590BD9962B03B21C002BE87C /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		590BD9982B03B228002BE87C /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
+		590BD99A2B03B233002BE87C /* LocationsViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewData.swift; sourceTree = "<group>"; };
+		590BD99C2B03B240002BE87C /* LocationsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDataProvider.swift; sourceTree = "<group>"; };
+		590BD99E2B03B257002BE87C /* LocationsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsAssembly.swift; sourceTree = "<group>"; };
+		590BD9A02B03B26C002BE87C /* LocationsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsCoordinator.swift; sourceTree = "<group>"; };
 		59090F692B0640A200455440 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		59090F6C2B0642E900455440 /* AuthViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewImp.xib; sourceTree = "<group>"; };
 		59134BF72B025154000EA580 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -56,11 +78,9 @@
 		59134C002B025B60000EA580 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		59134C022B025CB7000EA580 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		59134C042B026011000EA580 /* AuthApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApiClient.swift; sourceTree = "<group>"; };
-		5940FB292AE92FBA007FBDEF /* CharacterGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterGenerator.swift; sourceTree = "<group>"; };
 		5951D6F82AE8211B0042C0EB /* iosSchool_hshs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool_hshs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5951D6FF2AE8211B0042C0EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5951D7042AE8211D0042C0EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5951D7072AE8211D0042C0EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5951D7092AE8211D0042C0EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +92,14 @@
 		5989599E2AFD138400C36DC9 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		598959A02AFD141700C36DC9 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		598959A22AFD147300C36DC9 /* SplashAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAssembly.swift; sourceTree = "<group>"; };
+		59BFBFBE2B05055B000F3925 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		59BFBFC02B05056E000F3925 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
+		59BFBFC22B050583000F3925 /* CharactersViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewData.swift; sourceTree = "<group>"; };
+		59BFBFC42B050590000F3925 /* CharactersDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDataProvider.swift; sourceTree = "<group>"; };
+		59BFBFC62B0505A0000F3925 /* CharactersAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersAssembly.swift; sourceTree = "<group>"; };
+		59BFBFC82B0505B0000F3925 /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
+		59BFBFCA2B050A42000F3925 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		59BFBFCC2B050E1D000F3925 /* CharacterApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterApiClient.swift; sourceTree = "<group>"; };
 		59CE146D2AFE195900C49AE9 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		59CE146F2AFE1AD300C49AE9 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		59CE14712AFE1BDB00C49AE9 /* RegistrationViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewData.swift; sourceTree = "<group>"; };
@@ -99,6 +127,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		590BD9952B03B1FC002BE87C /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				590BD9962B03B21C002BE87C /* LocationsViewController.swift */,
+				590BD9982B03B228002BE87C /* LocationsView.swift */,
+				590BD99A2B03B233002BE87C /* LocationsViewData.swift */,
+				590BD99C2B03B240002BE87C /* LocationsDataProvider.swift */,
+				590BD99E2B03B257002BE87C /* LocationsAssembly.swift */,
+				590BD9A02B03B26C002BE87C /* LocationsCoordinator.swift */,
+			);
+			path = Locations;
+            sourceTree = "<group>";
+        };
 		59090F682B06407000455440 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +163,7 @@
 				59134BF72B025154000EA580 /* Location.swift */,
 				59134BF92B0259CC000EA580 /* LocationsList.swift */,
 				59134BFB2B025A3E000EA580 /* TokenResponse.swift */,
+				59BFBFCA2B050A42000F3925 /* Character.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,6 +175,9 @@
 				59134C002B025B60000EA580 /* NetworkConstants.swift */,
 				59134C022B025CB7000EA580 /* ApiError.swift */,
 				59134C042B026011000EA580 /* AuthApiClient.swift */,
+				590BD9912B039378002BE87C /* RegistrationApiClient.swift */,
+				590BD9932B03B1CE002BE87C /* LocationsApiClient.swift */,
+				59BFBFCC2B050E1D000F3925 /* CharacterApiClient.swift */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
@@ -160,11 +205,9 @@
 				59134BFD2B025AE2000EA580 /* ApiClient */,
 				59134BF62B02511B000EA580 /* Models */,
 				59CE9CC82AF9222E00E5A110 /* Modules */,
-				5940FB292AE92FBA007FBDEF /* CharacterGenerator.swift */,
 				5951D70F2AE8267B0042C0EB /* ColorGenerator.swift */,
 				5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */,
 				5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */,
-				5951D6FF2AE8211B0042C0EB /* ViewController.swift */,
 				5951D7042AE8211D0042C0EB /* Assets.xcassets */,
 				5951D7062AE8211D0042C0EB /* LaunchScreen.storyboard */,
 				5951D7092AE8211D0042C0EB /* Info.plist */,
@@ -187,6 +230,19 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		59BFBFBD2B05053A000F3925 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				59BFBFBE2B05055B000F3925 /* CharactersViewController.swift */,
+				59BFBFC02B05056E000F3925 /* CharactersView.swift */,
+				59BFBFC22B050583000F3925 /* CharactersViewData.swift */,
+				59BFBFC42B050590000F3925 /* CharactersDataProvider.swift */,
+				59BFBFC62B0505A0000F3925 /* CharactersAssembly.swift */,
+				59BFBFC82B0505B0000F3925 /* CharactersCoordinator.swift */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
 		59CE146C2AFE190E00C49AE9 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +259,8 @@
 		59CE9CC82AF9222E00E5A110 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				59BFBFBD2B05053A000F3925 /* Characters */,
+				590BD9952B03B1FC002BE87C /* Locations */,
 				59CE146C2AFE190E00C49AE9 /* Registration */,
 				598959952AFD128800C36DC9 /* Splash */,
 				59CE9CC92AF9225300E5A110 /* Auth */,
@@ -318,38 +376,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5951D7002AE8211B0042C0EB /* ViewController.swift in Sources */,
 				596018F62AEAA5CE00AB04A5 /* Assembly.swift in Sources */,
 				5989599B2AFD132300C36DC9 /* SplashView.swift in Sources */,
 				59134C052B026011000EA580 /* AuthApiClient.swift in Sources */,
+				590BD9942B03B1CE002BE87C /* LocationsApiClient.swift in Sources */,
 				59134C012B025B60000EA580 /* NetworkConstants.swift in Sources */,
+				590BD9A12B03B26C002BE87C /* LocationsCoordinator.swift in Sources */,
 				5989599F2AFD138400C36DC9 /* SplashViewController.swift in Sources */,
 				5951D7102AE8267B0042C0EB /* ColorGenerator.swift in Sources */,
 				59090F6A2B0640A200455440 /* BaseViewController.swift in Sources */,
 				59CE14782AFE1FA700C49AE9 /* RegistrationCoordinator.swift in Sources */,
 				598959A12AFD141700C36DC9 /* SplashCoordinator.swift in Sources */,
 				59CE9CC52AF9185C00E5A110 /* BaseCoordinator.swift in Sources */,
+				590BD9972B03B21C002BE87C /* LocationsViewController.swift in Sources */,
+				59BFBFC92B0505B0000F3925 /* CharactersCoordinator.swift in Sources */,
 				59CE9CD52AF9261800E5A110 /* AuthCoordinator.swift in Sources */,
+				59BFBFBF2B05055B000F3925 /* CharactersViewController.swift in Sources */,
+				59BFBFCD2B050E1D000F3925 /* CharacterApiClient.swift in Sources */,
 				59CE14762AFE1CA700C49AE9 /* RegistrationAssembly.swift in Sources */,
 				59CE9CC72AF9194000E5A110 /* AppCoordinator.swift in Sources */,
+				59BFBFC72B0505A0000F3925 /* CharactersAssembly.swift in Sources */,
 				5951D6FC2AE8211B0042C0EB /* AppDelegate.swift in Sources */,
 				59134C032B025CB7000EA580 /* ApiError.swift in Sources */,
 				59CE14702AFE1AD300C49AE9 /* RegistrationView.swift in Sources */,
 				59134BFC2B025A3E000EA580 /* TokenResponse.swift in Sources */,
 				59CE9CCF2AF9242B00E5A110 /* AuthViewData.swift in Sources */,
 				59CE9CCD2AF9230D00E5A110 /* AuthView.swift in Sources */,
+				59BFBFC12B05056E000F3925 /* CharactersView.swift in Sources */,
 				59CE146E2AFE195900C49AE9 /* RegistrationViewController.swift in Sources */,
 				59CE9CD12AF9245800E5A110 /* AuthDataProvider.swift in Sources */,
-				5940FB2A2AE92FBA007FBDEF /* CharacterGenerator.swift in Sources */,
 				59134BF82B025154000EA580 /* Location.swift in Sources */,
 				59CE9CCB2AF922E900E5A110 /* AuthViewController.swift in Sources */,
 				5951D6FE2AE8211B0042C0EB /* SceneDelegate.swift in Sources */,
 				59CE14742AFE1C1A00C49AE9 /* RegistrationDataProvider.swift in Sources */,
+				59BFBFC52B050590000F3925 /* CharactersDataProvider.swift in Sources */,
 				59134BFA2B0259CC000EA580 /* LocationsList.swift in Sources */,
 				59CE9CD32AF9249600E5A110 /* AuthAssembly.swift in Sources */,
+				590BD99F2B03B257002BE87C /* LocationsAssembly.swift in Sources */,
 				59CE14722AFE1BDB00C49AE9 /* RegistrationViewData.swift in Sources */,
 				598959972AFD12A400C36DC9 /* SplashDataProvider.swift in Sources */,
+				59BFBFCB2B050A42000F3925 /* Character.swift in Sources */,
+				59BFBFC32B050583000F3925 /* CharactersViewData.swift in Sources */,
+				590BD99D2B03B240002BE87C /* LocationsDataProvider.swift in Sources */,
+				590BD9992B03B228002BE87C /* LocationsView.swift in Sources */,
+				590BD9922B039378002BE87C /* RegistrationApiClient.swift in Sources */,
 				598959A32AFD147300C36DC9 /* SplashAssembly.swift in Sources */,
+				590BD99B2B03B233002BE87C /* LocationsViewData.swift in Sources */,
 				598959992AFD12FD00C36DC9 /* SplashViewData.swift in Sources */,
 				59134BFF2B025AF6000EA580 /* ApiClient.swift in Sources */,
 			);

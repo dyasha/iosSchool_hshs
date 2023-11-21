@@ -17,5 +17,4 @@ struct LocationsList: Decodable {
 
     let info: Info
     let results: [Location]
-
 }
