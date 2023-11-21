@@ -9,6 +9,10 @@ import Foundation
 
 class Assembly {
 
+    var apiClient: ApiClient {
+        ApiClient()
+    }
+
     func coloerGenerator(alpha: Double) -> ColorGenerator {
         ColorGenerator(alpha: alpha)
     }
