@@ -38,12 +38,27 @@ class RegistrationViewImp: UIView, RegistrationView {
         configureButton(button: backButton)
     }
 
-   private func configureTextField(textField: UITextField) {
+    private func configureTextField(textField: UITextField) {
         textField.layer.cornerRadius = 15
         textField.layer.masksToBounds = true
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-
+        let containerShadow = UIView()
+        containerShadow.layer.cornerRadius = 15
+        containerShadow.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        containerShadow.layer.shadowOpacity = 1
+        containerShadow.layer.shadowRadius = 8
+        containerShadow.layer.shadowOffset = CGSize(width: 0, height: 5)
+        textField.superview?.insertSubview(containerShadow, belowSubview: textField)
+        containerShadow.addSubview(textField)
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        containerShadow.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            containerShadow.leadingAnchor.constraint(equalTo: textField.leadingAnchor),
+            containerShadow.trailingAnchor.constraint(equalTo: textField.trailingAnchor),
+            containerShadow.topAnchor.constraint(equalTo: textField.topAnchor),
+            containerShadow.bottomAnchor.constraint(equalTo: textField.bottomAnchor)
+        ])
     }
 
     private func configureButton(button: UIButton) {
@@ -51,5 +66,8 @@ class RegistrationViewImp: UIView, RegistrationView {
         button.layer.shadowOpacity = 1
         button.layer.shadowRadius = 8
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
+    }
+
+    @IBAction func login(sender: UIButton) {
     }
 }
