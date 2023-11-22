@@ -39,26 +39,18 @@ class RegistrationViewImp: UIView, RegistrationView {
     }
 
     private func configureTextField(textField: UITextField) {
+        textField.clipsToBounds = true
+        textField.borderStyle = .none
+        textField.layer.backgroundColor = UIColor(.white).cgColor
         textField.layer.cornerRadius = 15
-        textField.layer.masksToBounds = true
         textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        let containerShadow = UIView()
-        containerShadow.layer.cornerRadius = 15
-        containerShadow.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-        containerShadow.layer.shadowOpacity = 1
-        containerShadow.layer.shadowRadius = 8
-        containerShadow.layer.shadowOffset = CGSize(width: 0, height: 5)
-        textField.superview?.insertSubview(containerShadow, belowSubview: textField)
-        containerShadow.addSubview(textField)
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        containerShadow.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            containerShadow.leadingAnchor.constraint(equalTo: textField.leadingAnchor),
-            containerShadow.trailingAnchor.constraint(equalTo: textField.trailingAnchor),
-            containerShadow.topAnchor.constraint(equalTo: textField.topAnchor),
-            containerShadow.bottomAnchor.constraint(equalTo: textField.bottomAnchor)
-        ])
+        textField.layer.borderColor = UIColor(.black).cgColor
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: textField.frame.height))
+        textField.leftViewMode = UITextField.ViewMode.always
+        textField.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        textField.layer.shadowOpacity = 1
+        textField.layer.shadowRadius = 8
+        textField.layer.shadowOffset = CGSize(width: 0, height: 5)
     }
 
     private func configureButton(button: UIButton) {
