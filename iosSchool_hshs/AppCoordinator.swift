@@ -24,8 +24,30 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
     }
 
     private func authBootstrap() {
-        setRoot(viewController: assembly.registrationCoordinator { print("Hello World!") }.make())
+        let authCoordinator = assembly.authCoordinator { [weak self] in
+            DispatchQueue.main.async {
+                self?.setTabVC()
+            }
+        }
+        setRoot(viewController: authCoordinator.make())
     }
+
+    private func setTabVC() {
+        let tabVC = assembly.rootTabBarController()
+
+        let locationsCoord = assembly.locationsCoordinator()
+//        let cabinetCoord = assembly.cabinetCoodrinator()
+        guard let locationsVC = locationsCoord.make() else {
+            return
+        }
+        let navVC = assembly.rootNavigationController()
+        navVC.setViewControllers([locationsVC], animated: false)
+        navVC.tabBarItem = RootTab.locations.tabBarItem
+
+//        cabinetVC.tabBarItem = RootTab.cabinet.tabBarItem
+        tabVC.setViewControllers([navVC], animated: false)
+        setRoot(viewController: tabVC)
+        }
 
     private func setRoot(viewController: UIViewController?) {
         guard let window, let viewController else {

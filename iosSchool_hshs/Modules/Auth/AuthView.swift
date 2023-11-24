@@ -8,7 +8,13 @@
 import UIKit
 
 protocol AuthView: UIView {
+    var delegate: AuthViewDelegate? { get set }
     func setView()
+}
+
+protocol AuthViewDelegate: AnyObject {
+    func loginButtonDidTap(login: String, password: String)
+    func registrationButtonDidTap()
 }
 
 class AuthViewImp: UIView, AuthView {
@@ -21,6 +27,8 @@ class AuthViewImp: UIView, AuthView {
         @IBOutlet private var passwordTextField: UITextField!
         @IBOutlet private var loginButton: UIButton!
         @IBOutlet private var registrationButton: UIButton!
+
+    weak var delegate: AuthViewDelegate?
 
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -81,10 +89,16 @@ class AuthViewImp: UIView, AuthView {
     private func loginDidTap(sender: UIButton) {
         loginTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
+
+        delegate?.loginButtonDidTap(
+            login: loginTextField.text ?? "",
+            password: passwordTextField.text ?? ""
+        )
     }
 
     @objc
     private func registrationDidTap() {
+        delegate?.registrationButtonDidTap()
     }
 
     @objc
