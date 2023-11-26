@@ -112,7 +112,6 @@ class AuthViewImp: UIView, AuthView {
         let keyboardHeight = keyboardFrame.cgRectValue.height
         scrollView.contentInset.bottom = keyboardHeight
         scrollView.verticalScrollIndicatorInsets.bottom = keyboardHeight
-
     }
 
     @objc
@@ -126,4 +125,5 @@ class AuthViewImp: UIView, AuthView {
         loginTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
     }
+
 }
