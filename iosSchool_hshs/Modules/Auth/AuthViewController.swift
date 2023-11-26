@@ -11,7 +11,7 @@ import PKHUD
 
 class AuthViewController<View: AuthView>: BaseViewController<View> {
     var onOpenRegistration: (() -> Void)?
-    
+
     private var onOpenLogin: (() -> Void)?
     private let dataProvider: AuthDataProvider
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
+class SplashViewController<View: SplashView>: BaseViewController<View> {
 
     private let dataProvider: SplashDataProvider
     private let onSuccess: (() -> Void)?
@@ -25,14 +25,16 @@ class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        rootView.setView()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { [weak self] timer in
-            self?.onSuccess?()
-            timer.invalidate()
-        }
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//
+//        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { [weak self] timer in
+//            self?.onSuccess?()
+//            timer.invalidate()
+//        }
+//    }
 }
