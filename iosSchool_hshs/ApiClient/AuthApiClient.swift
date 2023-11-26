@@ -8,7 +8,6 @@
 import Foundation
 
 protocol AuthApiClient {
-
     func auth(
         login: String,
         password: String,
@@ -17,7 +16,6 @@ protocol AuthApiClient {
 }
 
 extension ApiClient: AuthApiClient {
-
     func auth(
         login: String,
         password: String,

@@ -8,7 +8,6 @@
 import Foundation
 
 struct NetworkConstants {
-
     enum HTTPMethod: String {
         case get = "GET"
         case post = "POST"

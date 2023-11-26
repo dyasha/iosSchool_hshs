@@ -9,9 +9,11 @@ import UIKit
 
 class RegistrationViewController<View: RegistrationView>: BaseViewController<View> {
     private let registrationDataProvider: RegistrationDataProvider
+    var onRegistrationSuccess: (() -> Void)?
 
-    init(registrationDataProvider: RegistrationDataProvider) {
+    init(registrationDataProvider: RegistrationDataProvider, onRegistrationSuccess: (() -> Void)?) {
         self.registrationDataProvider = registrationDataProvider
+        self.onRegistrationSuccess = onRegistrationSuccess
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -20,9 +22,17 @@ class RegistrationViewController<View: RegistrationView>: BaseViewController<Vie
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        view.backgroundColor = UIColor(red: 255/255, green: 182/255, blue: 193/255, alpha: 1.0)
+        registration()
+    }
 
-        rootView.setView()
+    func registration() {
+        registrationDataProvider.registration(username: "maybeusertest", password: "12345678") { token, error in
+            print(token ?? "Токена нет")
+            print(error?.rawValue ?? "Нет ошибки")
+        }
+        self.onRegistrationSuccess?()
     }
 }
