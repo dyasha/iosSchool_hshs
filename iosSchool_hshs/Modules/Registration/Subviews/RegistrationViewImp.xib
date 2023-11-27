@@ -76,6 +76,9 @@
                                                 </backgroundConfiguration>
                                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="registrationDoneDidTapWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="eWd-Hf-y1e"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrc-iX-nhe">
                                             <rect key="frame" x="0.0" y="52" width="398" height="40"/>
@@ -90,6 +93,9 @@
                                                 </backgroundConfiguration>
                                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="backDidTapWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="cDN-zW-Rfb"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
