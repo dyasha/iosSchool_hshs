@@ -8,4 +8,9 @@
 import Foundation
 
 struct LocationsViewData {
+    let cellsData: [LocationsCellData]
+
+    init(list: LocationsList) {
+        cellsData = list.results.map { LocationsCellData(locations: $0) }
+    }
 }
