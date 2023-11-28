@@ -44,29 +44,19 @@ class AuthViewImp: UIView, AuthView {
         imageView.contentMode = .scaleAspectFill
 
         labelView.layer.cornerRadius = 10
-        labelView.layer.masksToBounds = true
+        labelView.clipsToBounds = true
         labelView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
         labelView.layer.shadowOpacity = 1
         labelView.layer.shadowRadius = 10
-
         labelView.layer.shadowOffset = CGSize(width: 0, height: 8)
-        labelView.backgroundColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 0.30)
+        labelView.backgroundColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 0.35)
 
-        loginTextField.layer.cornerRadius = 15
-        loginTextField.layer.masksToBounds = true
-        loginTextField.layer.borderWidth = 1
-        loginTextField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        configureButton(button: registrationButton)
+        configureButton(button: loginButton)
 
-        passwordTextField.layer.cornerRadius = 15
-        passwordTextField.layer.borderWidth = 1
-        passwordTextField.layer.masksToBounds = true
-        passwordTextField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        configureTextField(textField: loginTextField)
+        configureTextField(textField: passwordTextField)
 
-        loginButton.layer.cornerRadius = 10
-        loginButton.layer.masksToBounds = true
-
-        registrationButton.layer.cornerRadius = 10
-        registrationButton.layer.masksToBounds = true
         registrationButton.addTarget(self, action: #selector(registrationDidTap), for: .touchUpInside)
 
         NotificationCenter.default.addObserver(
@@ -81,6 +71,29 @@ class AuthViewImp: UIView, AuthView {
             selector: #selector(keyboardWillHide),
             name: UIResponder.keyboardWillHideNotification,
             object: nil)
+    }
+
+    private func configureButton(button: UIButton) {
+        button.layer.cornerRadius = 10
+        button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        button.layer.shadowOpacity = 1
+        button.layer.shadowRadius = 8
+        button.layer.shadowOffset = CGSize(width: 0, height: 5)
+    }
+
+    private func configureTextField(textField: UITextField) {
+        textField.clipsToBounds = true
+        textField.borderStyle = .none
+        textField.layer.backgroundColor = UIColor(.white).cgColor
+        textField.layer.cornerRadius = 15
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor(.black).cgColor
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: textField.frame.height))
+        textField.leftViewMode = UITextField.ViewMode.always
+        textField.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        textField.layer.shadowOpacity = 1
+        textField.layer.shadowRadius = 8
+        textField.layer.shadowOffset = CGSize(width: 0, height: 5)
     }
 
     // MARK: - Private
