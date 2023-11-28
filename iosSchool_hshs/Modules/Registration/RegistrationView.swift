@@ -12,6 +12,7 @@ protocol RegistrationView: UIView {
 }
 
 class RegistrationViewImp: UIView, RegistrationView {
+    @IBOutlet private var scrollView: UIScrollView!
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var registrationLabel: UILabel!
     @IBOutlet private var loginTextField: UITextField!
@@ -19,7 +20,6 @@ class RegistrationViewImp: UIView, RegistrationView {
     @IBOutlet private var repeatPasswordTextField: UITextField!
     @IBOutlet private var doneButton: UIButton!
     @IBOutlet private var backButton: UIButton!
-    @IBOutlet private var scrollView: UIScrollView!
 
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -59,7 +59,8 @@ class RegistrationViewImp: UIView, RegistrationView {
             self,
             selector: #selector(keyboardWillHide),
             name: UIResponder.keyboardWillHideNotification,
-            object: nil)
+            object: nil
+        )
 }
 
     private func configureTextField(textField: UITextField) {
