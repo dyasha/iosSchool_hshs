@@ -42,6 +42,7 @@
 		598F057C2B0F89450078DE4A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598F057B2B0F89450078DE4A /* BaseNavigationController.swift */; };
 		598F057F2B0F92400078DE4A /* SPIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 598F057E2B0F92400078DE4A /* SPIndicator */; };
 		598F05822B0F93CC0078DE4A /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 598F05812B0F93CC0078DE4A /* PKHUD */; };
+		598F05852B10F4DC0078DE4A /* SplashViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598F05842B10F4DC0078DE4A /* SplashViewImp.xib */; };
 		59BFBFBF2B05055B000F3925 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFBFBE2B05055B000F3925 /* CharactersViewController.swift */; };
 		59BFBFC12B05056E000F3925 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFBFC02B05056E000F3925 /* CharactersView.swift */; };
 		59BFBFC32B050583000F3925 /* CharactersViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFBFC22B050583000F3925 /* CharactersViewData.swift */; };
@@ -106,6 +107,7 @@
 		598F05762B0F88400078DE4A /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
 		598F05792B0F88A40078DE4A /* RootTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTab.swift; sourceTree = "<group>"; };
 		598F057B2B0F89450078DE4A /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		598F05842B10F4DC0078DE4A /* SplashViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewImp.xib; sourceTree = "<group>"; };
 		59BFBFBE2B05055B000F3925 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		59BFBFC02B05056E000F3925 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 		59BFBFC22B050583000F3925 /* CharactersViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewData.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 		598959952AFD128800C36DC9 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				598F05832B10F4C20078DE4A /* Subviews */,
 				598959962AFD12A400C36DC9 /* SplashDataProvider.swift */,
 				598959982AFD12FD00C36DC9 /* SplashViewData.swift */,
 				5989599A2AFD132300C36DC9 /* SplashView.swift */,
@@ -269,6 +272,14 @@
 				598F05792B0F88A40078DE4A /* RootTab.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		598F05832B10F4C20078DE4A /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				598F05842B10F4DC0078DE4A /* SplashViewImp.xib */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		59BFBFBD2B05053A000F3925 /* Characters */ = {
@@ -413,6 +424,7 @@
 				59D584DD2B14D1FB00EFCBD5 /* LocationsCell.xib in Resources */,
 				5951D7082AE8211D0042C0EB /* LaunchScreen.storyboard in Resources */,
 				5951D7052AE8211D0042C0EB /* Assets.xcassets in Resources */,
+				598F05852B10F4DC0078DE4A /* SplashViewImp.xib in Resources */,
 				59090F6D2B0642E900455440 /* AuthViewImp.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

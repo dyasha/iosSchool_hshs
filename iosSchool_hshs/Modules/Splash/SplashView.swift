@@ -7,6 +7,8 @@
 
 import UIKit
 
-protocol SplashView: UIView {}
+protocol SplashView: UIView {
+}
 
-class SplashViewImp: UIView, SplashView {}
+class SplashViewImp: UIView, SplashView {
+}
