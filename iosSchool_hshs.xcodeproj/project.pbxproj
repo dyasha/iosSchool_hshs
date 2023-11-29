@@ -24,7 +24,6 @@
 		59134C012B025B60000EA580 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134C002B025B60000EA580 /* NetworkConstants.swift */; };
 		59134C032B025CB7000EA580 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134C022B025CB7000EA580 /* ApiError.swift */; };
 		59134C052B026011000EA580 /* AuthApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134C042B026011000EA580 /* AuthApiClient.swift */; };
-		5944C00F2B07BA5E006D7FB7 /* RegistrationViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5944C00E2B07BA5E006D7FB7 /* RegistrationViewImp.xib */; };
 		5951D6FC2AE8211B0042C0EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */; };
 		5951D6FE2AE8211B0042C0EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */; };
 		5951D7052AE8211D0042C0EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5951D7042AE8211D0042C0EB /* Assets.xcassets */; };
@@ -37,11 +36,13 @@
 		5989599F2AFD138400C36DC9 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5989599E2AFD138400C36DC9 /* SplashViewController.swift */; };
 		598959A12AFD141700C36DC9 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598959A02AFD141700C36DC9 /* SplashCoordinator.swift */; };
 		598959A32AFD147300C36DC9 /* SplashAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598959A22AFD147300C36DC9 /* SplashAssembly.swift */; };
+		598967022B13786000E230AC /* RegistrationViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598967012B13786000E230AC /* RegistrationViewImp.xib */; };
 		598F05772B0F88400078DE4A /* TapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598F05762B0F88400078DE4A /* TapBarController.swift */; };
 		598F057A2B0F88A40078DE4A /* RootTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598F05792B0F88A40078DE4A /* RootTab.swift */; };
 		598F057C2B0F89450078DE4A /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598F057B2B0F89450078DE4A /* BaseNavigationController.swift */; };
 		598F057F2B0F92400078DE4A /* SPIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 598F057E2B0F92400078DE4A /* SPIndicator */; };
 		598F05822B0F93CC0078DE4A /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 598F05812B0F93CC0078DE4A /* PKHUD */; };
+		598F05852B10F4DC0078DE4A /* SplashViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598F05842B10F4DC0078DE4A /* SplashViewImp.xib */; };
 		59BFBFBF2B05055B000F3925 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFBFBE2B05055B000F3925 /* CharactersViewController.swift */; };
 		59BFBFC12B05056E000F3925 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFBFC02B05056E000F3925 /* CharactersView.swift */; };
 		59BFBFC32B050583000F3925 /* CharactersViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BFBFC22B050583000F3925 /* CharactersViewData.swift */; };
@@ -88,7 +89,6 @@
 		59134C002B025B60000EA580 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		59134C022B025CB7000EA580 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		59134C042B026011000EA580 /* AuthApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApiClient.swift; sourceTree = "<group>"; };
-		5944C00E2B07BA5E006D7FB7 /* RegistrationViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewImp.xib; sourceTree = "<group>"; };
 		5951D6F82AE8211B0042C0EB /* iosSchool_hshs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool_hshs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,9 +103,11 @@
 		5989599E2AFD138400C36DC9 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		598959A02AFD141700C36DC9 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		598959A22AFD147300C36DC9 /* SplashAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAssembly.swift; sourceTree = "<group>"; };
+		598967012B13786000E230AC /* RegistrationViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewImp.xib; sourceTree = "<group>"; };
 		598F05762B0F88400078DE4A /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
 		598F05792B0F88A40078DE4A /* RootTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTab.swift; sourceTree = "<group>"; };
 		598F057B2B0F89450078DE4A /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		598F05842B10F4DC0078DE4A /* SplashViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewImp.xib; sourceTree = "<group>"; };
 		59BFBFBE2B05055B000F3925 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		59BFBFC02B05056E000F3925 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 		59BFBFC22B050583000F3925 /* CharactersViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewData.swift; sourceTree = "<group>"; };
@@ -208,7 +210,7 @@
 		5944C00D2B07BA3A006D7FB7 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
-				5944C00E2B07BA5E006D7FB7 /* RegistrationViewImp.xib */,
+				598967012B13786000E230AC /* RegistrationViewImp.xib */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -253,6 +255,7 @@
 		598959952AFD128800C36DC9 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				598F05832B10F4C20078DE4A /* Subviews */,
 				598959962AFD12A400C36DC9 /* SplashDataProvider.swift */,
 				598959982AFD12FD00C36DC9 /* SplashViewData.swift */,
 				5989599A2AFD132300C36DC9 /* SplashView.swift */,
@@ -269,6 +272,14 @@
 				598F05792B0F88A40078DE4A /* RootTab.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		598F05832B10F4C20078DE4A /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				598F05842B10F4DC0078DE4A /* SplashViewImp.xib */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		59BFBFBD2B05053A000F3925 /* Characters */ = {
@@ -409,10 +420,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5944C00F2B07BA5E006D7FB7 /* RegistrationViewImp.xib in Resources */,
+				598967022B13786000E230AC /* RegistrationViewImp.xib in Resources */,
 				59D584DD2B14D1FB00EFCBD5 /* LocationsCell.xib in Resources */,
 				5951D7082AE8211D0042C0EB /* LaunchScreen.storyboard in Resources */,
 				5951D7052AE8211D0042C0EB /* Assets.xcassets in Resources */,
+				598F05852B10F4DC0078DE4A /* SplashViewImp.xib in Resources */,
 				59090F6D2B0642E900455440 /* AuthViewImp.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

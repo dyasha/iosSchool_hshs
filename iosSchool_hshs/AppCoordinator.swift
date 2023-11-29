@@ -19,7 +19,6 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
         let coordinator = assembly.splashCoordinator { [weak self] in
             self?.authBootstrap()
         }
-
         setRoot(viewController: coordinator.make())
     }
 
