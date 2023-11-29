@@ -8,12 +8,7 @@
 import UIKit
 
 protocol SplashView: UIView {
-    func setView()
 }
 
 class SplashViewImp: UIView, SplashView {
-    @IBOutlet private var imageView: UIImageView!
-
-    func setView() {
-    }
 }

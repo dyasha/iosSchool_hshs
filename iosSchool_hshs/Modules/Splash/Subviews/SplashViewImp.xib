@@ -29,9 +29,6 @@
                 <constraint firstItem="9wc-OG-at6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2Ss-re-hIv"/>
                 <constraint firstItem="9wc-OG-at6" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="fhW-rC-V8w"/>
             </constraints>
-            <connections>
-                <outlet property="imageView" destination="9wc-OG-at6" id="MTu-nI-0w0"/>
-            </connections>
             <point key="canvasLocation" x="139.53488372093022" y="19.313304721030043"/>
         </view>
     </objects>
