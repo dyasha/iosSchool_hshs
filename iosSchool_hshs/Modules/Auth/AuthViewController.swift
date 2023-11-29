@@ -43,13 +43,13 @@ extension AuthViewController: AuthViewDelegate {
             DispatchQueue.main.async {
                 HUD.hide()
             }
-            guard let self, token != nil else {
-                DispatchQueue.main.async {
-                    SPIndicator.present(title: error?.rawValue ?? "", haptic: .error)
-                }
-                return
-            }
-           onOpenLogin?()
+//            guard let self, token != nil else {
+//                DispatchQueue.main.async {
+//                    SPIndicator.present(title: error?.rawValue ?? "", haptic: .error)
+//                }
+//                return
+//            }
+            self?.onOpenLogin?()
         }
     }
 
