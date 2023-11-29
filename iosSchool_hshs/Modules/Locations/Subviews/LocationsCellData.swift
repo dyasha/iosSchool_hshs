@@ -10,9 +10,11 @@ import Foundation
 struct LocationsCellData {
     let name: String
     let type: String
+    let residents: [String]
 
     init(locations: Location) {
         name = locations.name
         type = locations.type
+        residents = locations.residents
     }
 }

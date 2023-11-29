@@ -37,12 +37,17 @@ class LocationsViewController<View: LocationsView>: BaseViewController<View> {
                 .foregroundColor: UIColor(named: "DarkBlue") ?? .black,
                 .font: UIFont.systemFont(ofSize: 18)
             ]
-//            navigationItem.rightBarButtonItem = UIBarButtonItem(
-//                barButtonSystemItem: .refresh,
-//                target: self,
-//                action: #selector(reload)
-//            )
+            navigationItem.rightBarButtonItem = UIBarButtonItem(
+                barButtonSystemItem: .refresh,
+                target: self,
+                action: #selector(reload)
+            )
         }
+
+    @objc
+    private func reload() {
+        getLocations()
+    }
 
     private func getLocations() {
         locationsDataProvider.getLocations { [weak self] locations, error in

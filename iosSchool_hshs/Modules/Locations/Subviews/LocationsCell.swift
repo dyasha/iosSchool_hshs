@@ -18,6 +18,8 @@ class LocationsCell: UITableViewCell {
     }
 
     @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var typeLabel: UILabel!
+    @IBOutlet private weak var residentsLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,5 +30,7 @@ class LocationsCell: UITableViewCell {
 
     private func update(data: LocationsCellData) {
         nameLabel.text = data.name
+        typeLabel.text = data.type
+        residentsLabel.text = "Население: " + String(data.residents.count)
     }
 }

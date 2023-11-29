@@ -39,6 +39,7 @@ class LocationsViewImp: UIView, LocationsView {
         tableView.allowsSelectionDuringEditing = false
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorColor = UIColor(.clear)
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(tableView)
@@ -46,7 +47,6 @@ class LocationsViewImp: UIView, LocationsView {
         tableView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-
     }
 
     func update(data: LocationsViewData) {
