@@ -15,9 +15,5 @@ class SplashViewImp: UIView, SplashView {
     @IBOutlet private var imageView: UIImageView!
 
     func setView() {
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-
     }
 }
