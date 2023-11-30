@@ -34,7 +34,7 @@ class LocationsViewImp: UIView, LocationsView {
 
         let nib = UINib(nibName: LocationsCell.className, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: LocationsCell.className)
-        tableView.contentInset = UIEdgeInsets(top: 40, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         tableView.backgroundColor = .clear
         tableView.allowsSelectionDuringEditing = false
         tableView.dataSource = self

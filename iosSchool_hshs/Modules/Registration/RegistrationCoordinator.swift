@@ -13,14 +13,6 @@ class RegistrationCoordinator: BaseCoordinator<RegistrationCoordinator.Context> 
     }
 
     override func make() -> UIViewController? {
-        let controller = assembly.registrationVC(onRegistrationSuccess: context.onRegistrationSuccess)
-//       controller.onRegistrationSuccess = { [weak controller] in
-//           let coordinator = self.assembly.locationsCoordinator()
-//           guard let locationVC = coordinator.make() else {
-//               return
-//           }
-//           controller?.present(locationVC, animated: true)
-//        }
-        return controller
+        assembly.registrationVC(onRegistrationSuccess: context.onRegistrationSuccess)
     }
 }
