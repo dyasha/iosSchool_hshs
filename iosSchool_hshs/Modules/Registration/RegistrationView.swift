@@ -8,7 +8,13 @@
 import UIKit
 
 protocol RegistrationView: UIView {
+    var delegate: RegistrationViewDelegate? { get set }
     func setView()
+}
+
+protocol RegistrationViewDelegate: AnyObject {
+    func registrationDoneDidTap(login: String, password: String)
+    func backDidTap()
 }
 
 class RegistrationViewImp: UIView, RegistrationView {
@@ -20,6 +26,8 @@ class RegistrationViewImp: UIView, RegistrationView {
     @IBOutlet private var repeatPasswordTextField: UITextField!
     @IBOutlet private var doneButton: UIButton!
     @IBOutlet private var backButton: UIButton!
+
+    weak var delegate: RegistrationViewDelegate?
 
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -92,10 +100,19 @@ class RegistrationViewImp: UIView, RegistrationView {
     private func registrationDoneDidTap(sender: UIButton) {
         loginTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
+        repeatPasswordTextField.resignFirstResponder()
+//        if passwordTextField != repeatPasswordTextField {
+//            return
+//        }
+        delegate?.registrationDoneDidTap(
+            login: loginTextField.text ?? "",
+            password: passwordTextField.text ?? ""
+        )
     }
 
     @IBAction
     private func backDidTap(sender: UIButton) {
+        delegate?.backDidTap()
     }
 
     @objc
