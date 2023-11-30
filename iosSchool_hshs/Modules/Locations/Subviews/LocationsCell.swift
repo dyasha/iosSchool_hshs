@@ -21,11 +21,6 @@ class LocationsCell: UITableViewCell {
     @IBOutlet private weak var typeLabel: UILabel!
     @IBOutlet private weak var residentsLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
 // MARK: - Private methods
 
     private func update(data: LocationsCellData) {

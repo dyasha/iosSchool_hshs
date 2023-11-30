@@ -69,7 +69,7 @@ class RegistrationViewImp: UIView, RegistrationView {
             name: UIResponder.keyboardWillHideNotification,
             object: nil
         )
-}
+    }
 
     private func configureTextField(textField: UITextField) {
         textField.clipsToBounds = true
@@ -101,9 +101,6 @@ class RegistrationViewImp: UIView, RegistrationView {
         loginTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
         repeatPasswordTextField.resignFirstResponder()
-//        if passwordTextField != repeatPasswordTextField {
-//            return
-//        }
         delegate?.registrationDoneDidTap(
             login: loginTextField.text ?? "",
             password: passwordTextField.text ?? ""

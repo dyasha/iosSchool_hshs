@@ -70,7 +70,7 @@
                                                 <constraint firstAttribute="height" constant="40" id="lmZ-FM-c4S"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         </textField>
                                     </subviews>
                                 </stackView>

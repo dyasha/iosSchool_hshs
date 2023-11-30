@@ -41,13 +41,13 @@ extension RegistrationViewController: RegistrationViewDelegate {
             DispatchQueue.main.async {
                 HUD.hide()
             }
-//            guard let self, token != nil else {
-//                DispatchQueue.main.async {
-//                    SPIndicator.present(title: error?.rawValue ?? "", haptic: .error)
-//                }
-//                return
-//            }
-            self?.onRegistrationSuccess?()
+            guard let self, token != nil else {
+                DispatchQueue.main.async {
+                    SPIndicator.present(title: error?.rawValue ?? "", haptic: .error)
+                }
+                return
+            }
+            onRegistrationSuccess?()
         }
     }
 
