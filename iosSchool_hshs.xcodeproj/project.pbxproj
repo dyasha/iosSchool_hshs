@@ -24,6 +24,7 @@
 		59134C012B025B60000EA580 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134C002B025B60000EA580 /* NetworkConstants.swift */; };
 		59134C032B025CB7000EA580 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134C022B025CB7000EA580 /* ApiError.swift */; };
 		59134C052B026011000EA580 /* AuthApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59134C042B026011000EA580 /* AuthApiClient.swift */; };
+		594725852B18CC6E0051342D /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594725842B18CC6E0051342D /* ImageService.swift */; };
 		5951D6FC2AE8211B0042C0EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */; };
 		5951D6FE2AE8211B0042C0EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */; };
 		5951D7052AE8211D0042C0EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5951D7042AE8211D0042C0EB /* Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		59134C002B025B60000EA580 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		59134C022B025CB7000EA580 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		59134C042B026011000EA580 /* AuthApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApiClient.swift; sourceTree = "<group>"; };
+		594725842B18CC6E0051342D /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		5951D6F82AE8211B0042C0EB /* iosSchool_hshs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool_hshs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +217,14 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
+		594725832B18CC580051342D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				594725842B18CC6E0051342D /* ImageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		5951D6EF2AE8211B0042C0EB = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +244,7 @@
 		5951D6FA2AE8211B0042C0EB /* iosSchool_hshs */ = {
 			isa = PBXGroup;
 			children = (
+				594725832B18CC580051342D /* Services */,
 				59D584E02B14D79200EFCBD5 /* Extensions */,
 				598F05782B0F88930078DE4A /* UIKit */,
 				59090F682B06407000455440 /* Common */,
@@ -466,6 +477,7 @@
 				590BD9A12B03B26C002BE87C /* LocationsCoordinator.swift in Sources */,
 				59D584DC2B14D1FB00EFCBD5 /* LocationsCell.swift in Sources */,
 				5989599F2AFD138400C36DC9 /* SplashViewController.swift in Sources */,
+				594725852B18CC6E0051342D /* ImageService.swift in Sources */,
 				5951D7102AE8267B0042C0EB /* ColorGenerator.swift in Sources */,
 				59090F6A2B0640A200455440 /* BaseViewController.swift in Sources */,
 				59CE14782AFE1FA700C49AE9 /* RegistrationCoordinator.swift in Sources */,

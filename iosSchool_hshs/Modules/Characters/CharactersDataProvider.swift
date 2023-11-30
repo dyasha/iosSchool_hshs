@@ -12,6 +12,7 @@ protocol CharactersDataProvider {
         id: Int,
         onRequestCompleted: @escaping (Character?, ApiError?) -> Void
     )
+    func character(url: String, onRequestCompleted: @escaping (Character?, ApiError?) -> Void)
 }
 
 class CharactersDataProviderImp: CharactersDataProvider {
@@ -23,5 +24,9 @@ class CharactersDataProviderImp: CharactersDataProvider {
 
     func getCharacter(id: Int, onRequestCompleted: @escaping (Character?, ApiError?) -> Void) {
         characterApiClient.getCharacter(id: id, onRequestCompleted: onRequestCompleted)
+    }
+
+    func character(url: String, onRequestCompleted: @escaping (Character?, ApiError?) -> Void) {
+        characterApiClient.character(url: url, onRequestCompleted: onRequestCompleted)
     }
 }
