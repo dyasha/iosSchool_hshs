@@ -84,7 +84,7 @@ class AuthViewImp: UIView, AuthView {
     private func configureTextField(textField: UITextField) {
         textField.clipsToBounds = true
         textField.borderStyle = .none
-        textField.layer.backgroundColor = UIColor(.white).cgColor
+        textField.layer.backgroundColor = UIColor(named: "light-grey")?.cgColor
         textField.layer.cornerRadius = 15
         textField.layer.borderWidth = 1
         textField.layer.borderColor = UIColor(.black).cgColor
@@ -96,7 +96,7 @@ class AuthViewImp: UIView, AuthView {
         textField.layer.shadowOffset = CGSize(width: 0, height: 5)
     }
 
-    // MARK: - Private
+    // MARK: - Private methods
 
     @IBAction
     private func loginDidTap(sender: UIButton) {
