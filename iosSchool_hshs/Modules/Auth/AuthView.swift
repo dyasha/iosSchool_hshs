@@ -45,11 +45,11 @@ class AuthViewImp: UIView, AuthView {
 
         labelView.layer.cornerRadius = 10
         labelView.clipsToBounds = true
-        labelView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        labelView.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
         labelView.layer.shadowOpacity = 1
         labelView.layer.shadowRadius = 10
         labelView.layer.shadowOffset = CGSize(width: 0, height: 8)
-        labelView.backgroundColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 0.35)
+        labelView.backgroundColor = UIColor(named: "auth-label-color")
 
         configureButton(button: registrationButton)
         configureButton(button: loginButton)
@@ -75,7 +75,7 @@ class AuthViewImp: UIView, AuthView {
 
     private func configureButton(button: UIButton) {
         button.layer.cornerRadius = 10
-        button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        button.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
         button.layer.shadowOpacity = 1
         button.layer.shadowRadius = 8
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
@@ -90,7 +90,7 @@ class AuthViewImp: UIView, AuthView {
         textField.layer.borderColor = UIColor(.black).cgColor
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: textField.frame.height))
         textField.leftViewMode = UITextField.ViewMode.always
-        textField.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        textField.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
         textField.layer.shadowOpacity = 1
         textField.layer.shadowRadius = 8
         textField.layer.shadowOffset = CGSize(width: 0, height: 5)

@@ -14,7 +14,7 @@ enum RootTab: Int {
     var tabBarItem: UITabBarItem {
         let tabBarItem = UITabBarItem(
             title: title,
-            image: image,
+            image: image?.withRenderingMode(.alwaysOriginal),
             tag: self.rawValue
         )
         let appearance = UITabBarAppearance()
