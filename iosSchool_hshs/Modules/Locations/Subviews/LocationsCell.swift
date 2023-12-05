@@ -26,6 +26,6 @@ class LocationsCell: UITableViewCell {
     private func update(data: LocationsCellData) {
         nameLabel.text = data.name
         typeLabel.text = data.type
-        residentsLabel.text = "Население: " + String(data.residents.count)
+        residentsLabel.text = data.population
     }
 }
