@@ -24,11 +24,13 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
 
     private func authBootstrap() {
         guard assembly.storageManager.getToken() == nil else {
+            assembly.storageManager.saveLastLoginDate()
             setTabVC()
             return
         }
         let authCoordinator = assembly.authCoordinator { [weak self] in
             DispatchQueue.main.async {
+                self?.assembly.storageManager.saveLastLoginDate()
                 self?.setTabVC()
             }
         }
@@ -36,6 +38,7 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
     }
 
     private func setTabVC() {
+        print(assembly.storageManager.getLastLoginDate() ?? 0)
         let tabVC = assembly.rootTabBarController()
 
         let locationsCoord = assembly.locationsCoordinator()
