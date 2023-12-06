@@ -32,10 +32,9 @@ class CharactersViewController: UIViewController {
 
         charactersUrlList.forEach { url in
             requestCharacter(url: url) { [weak self] character in
-                print(111)
                 print(character.name)
                 self?.imageService.getImage(url: character.image, completion: { [weak self] image in
-                    print(image?.size ?? 0)
+                    print(image ?? 0 )
                 })
             }
         }
@@ -59,6 +58,7 @@ class CharactersViewController: UIViewController {
             }
         }
     }
+
     private func getCharacter(id: Int) {
         charactersDataProvider.getCharacter(id: id) { character, error in
             print(character ?? "нет персонажа")
