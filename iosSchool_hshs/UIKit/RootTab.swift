@@ -14,11 +14,12 @@ enum RootTab: Int {
     var tabBarItem: UITabBarItem {
         let tabBarItem = UITabBarItem(
             title: title,
-            image: image,
+            image: image?.withRenderingMode(.alwaysOriginal),
             tag: self.rawValue
         )
         let appearance = UITabBarAppearance()
         appearance.stackedLayoutAppearance.selected.titleTextAttributes = [
+            .foregroundColor: UIColor(.black),
             .font: UIFont.systemFont(ofSize: 10)
         ]
         tabBarItem.standardAppearance = appearance
