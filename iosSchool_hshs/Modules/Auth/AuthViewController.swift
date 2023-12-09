@@ -14,10 +14,12 @@ class AuthViewController<View: AuthView>: BaseViewController<View> {
 
     private var onOpenLogin: (() -> Void)?
     private let dataProvider: AuthDataProvider
+    private let storageManager: StorageManager
 
-    init(dataProvider: AuthDataProvider, onOpenLogin: (() -> Void)?) {
+    init(dataProvider: AuthDataProvider, storageManager: StorageManager, onOpenLogin: (() -> Void)?) {
         self.onOpenLogin = onOpenLogin
         self.dataProvider = dataProvider
+        self.storageManager = storageManager
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -43,13 +45,14 @@ extension AuthViewController: AuthViewDelegate {
             DispatchQueue.main.async {
                 HUD.hide()
             }
-//            guard let self, token != nil else {
-//                DispatchQueue.main.async {
-//                    SPIndicator.present(title: error?.rawValue ?? "", haptic: .error)
-//                }
-//                return
-//            }
-            self?.onOpenLogin?()
+            guard let self, let token else {
+                DispatchQueue.main.async {
+                    SPIndicator.present(title: error?.rawValue ?? "", haptic: .error)
+                }
+                return
+            }
+            self.storageManager.saveToken(token: token)
+            self.onOpenLogin?()
         }
     }
 

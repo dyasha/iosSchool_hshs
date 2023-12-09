@@ -11,10 +11,16 @@ import SPIndicator
 
 class RegistrationViewController<View: RegistrationView>: BaseViewController<View> {
     private let registrationDataProvider: RegistrationDataProvider
+    private let storageManager: StorageManager
     var onRegistrationSuccess: (() -> Void)?
 
-    init(registrationDataProvider: RegistrationDataProvider, onRegistrationSuccess: (() -> Void)?) {
+    init(
+        registrationDataProvider: RegistrationDataProvider,
+        storageManager: StorageManager,
+        onRegistrationSuccess: (() -> Void)?
+    ) {
         self.registrationDataProvider = registrationDataProvider
+        self.storageManager = storageManager
         self.onRegistrationSuccess = onRegistrationSuccess
 
         super.init(nibName: nil, bundle: nil)
