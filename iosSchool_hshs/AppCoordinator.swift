@@ -24,13 +24,11 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
 
     private func authBootstrap() {
         guard assembly.storageManager.getToken() == nil else {
-            assembly.storageManager.saveLastLoginDate()
             setTabVC()
             return
         }
         let authCoordinator = assembly.authCoordinator { [weak self] in
             DispatchQueue.main.async {
-                self?.assembly.storageManager.saveLastLoginDate()
                 self?.setTabVC()
             }
         }
