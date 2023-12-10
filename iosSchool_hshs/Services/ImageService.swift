@@ -21,8 +21,8 @@ class ImageServiceImp: ImageService {
     }
 
     func getImage(url: String, completion: @escaping (UIImage?) -> Void) {
-        if self.imageDict.count > 50 {
-            self.imageDict.removeAll()
+        if imageDict.count > 50 {
+            imageDict.removeAll()
         }
         if let image = imageDict[url] {
             completion(image)
