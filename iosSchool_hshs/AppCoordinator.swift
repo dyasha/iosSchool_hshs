@@ -36,7 +36,6 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
     }
 
     private func setTabVC() {
-        print(assembly.storageManager.getLastLoginDate() ?? 0)
         let tabVC = assembly.rootTabBarController()
 
         let locationsCoord = assembly.locationsCoordinator()

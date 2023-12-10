@@ -45,6 +45,7 @@ class RegistrationViewController<View: RegistrationView>: BaseViewController<Vie
             print(token ?? "Токена нет")
             print(error?.rawValue ?? "Нет ошибки")
         }
+        self.storageManager.saveLastLoginDate()
         self.onRegistrationSuccess?()
     }
 }
