@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CharactersViewController: UIViewController {
+class CharactersViewController<View: CharactersView>: BaseViewController<View> {
     private var characters: [Character] = []
     private let charactersDataProvider: CharactersDataProvider
     private let charactersUrlList: [String]
@@ -30,11 +30,25 @@ class CharactersViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
 
-        charactersUrlList.forEach { url in
-            requestCharacter(url: url) { [weak self] character in
-                print(character.name)
+        rootView.setView()
+        rootView.update(data: CharactersViewData(cells: charactersUrlList.map { CharactersCellData(url: $0) }))
+        charactersUrlList.enumerated().forEach { idx, url in
+            requestCharacter(url: url) { [weak self] character in          
                 self?.imageService.getImage(url: character.image, completion: { [weak self] image in
                     print(image ?? 0 )
+                guard let self else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    self.rootView.updateCharacter(idx: idx, with: CharactersCellData.init(
+                        character: character,
+                        isLoading: true,
+                        image: nil,
+                        selectClosure: nil
+                    ))
+                }
+                self.imageService.getImage(url: character.image, completion: { [weak self] image in
+                    print(image?.size ?? 0)
                 })
             }
         }

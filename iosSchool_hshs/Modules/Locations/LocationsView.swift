@@ -34,11 +34,12 @@ class LocationsViewImp: UIView, LocationsView {
 
         let nib = UINib(nibName: LocationsCell.className, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: LocationsCell.className)
-        tableView.contentInset = UIEdgeInsets(top: 40, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         tableView.backgroundColor = .clear
         tableView.allowsSelectionDuringEditing = false
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorColor = UIColor(.clear)
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(tableView)
@@ -46,7 +47,6 @@ class LocationsViewImp: UIView, LocationsView {
         tableView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-
     }
 
     func update(data: LocationsViewData) {

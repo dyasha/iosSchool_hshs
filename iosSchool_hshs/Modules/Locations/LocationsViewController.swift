@@ -32,17 +32,23 @@ class LocationsViewController<View: LocationsView>: BaseViewController<View> {
     // MARK: - Private methods
 
     private func setupBar() {
-            title = "Выбор планеты"
-            navigationController?.navigationBar.titleTextAttributes = [
-                .foregroundColor: UIColor(named: "DarkBlue") ?? .black,
-                .font: UIFont.systemFont(ofSize: 18)
-            ]
-//            navigationItem.rightBarButtonItem = UIBarButtonItem(
-//                barButtonSystemItem: .refresh,
-//                target: self,
-//                action: #selector(reload)
-//            )
-        }
+        title = "Выбор планеты"
+        navigationController?.navigationBar.titleTextAttributes = [
+            .foregroundColor: UIColor(.black),
+            .font: UIFont.systemFont(ofSize: 18)
+        ]
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .refresh,
+            target: self,
+            action: #selector(reload)
+        )
+        navigationItem.rightBarButtonItem?.tintColor = .black
+    }
+
+    @objc
+    private func reload() {
+        getLocations()
+    }
 
     private func getLocations() {
         locationsDataProvider.getLocations { [weak self] locations, error in
