@@ -57,6 +57,14 @@ extension RegistrationViewController: RegistrationViewDelegate {
         }
     }
 
+    func registration() {
+        registrationDataProvider.registration(username: "maybeusertest", password: "12345678") { token, error in
+            print(token ?? "Токена нет")
+            print(error?.rawValue ?? "Нет ошибки")
+        }
+        self.storageManager.saveLastLoginDate()
+        self.onRegistrationSuccess?()
+
     func backDidTap() {
         dismiss(animated: true, completion: nil)
     }
