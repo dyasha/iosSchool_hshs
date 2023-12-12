@@ -8,7 +8,13 @@
 import UIKit
 
 protocol RegistrationView: UIView {
+    var delegate: RegistrationViewDelegate? { get set }
     func setView()
+}
+
+protocol RegistrationViewDelegate: AnyObject {
+    func registrationDoneDidTap(login: String, password: String)
+    func backDidTap()
 }
 
 class RegistrationViewImp: UIView, RegistrationView {
@@ -21,6 +27,8 @@ class RegistrationViewImp: UIView, RegistrationView {
     @IBOutlet private var doneButton: UIButton!
     @IBOutlet private var backButton: UIButton!
 
+    weak var delegate: RegistrationViewDelegate?
+
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -30,14 +38,14 @@ class RegistrationViewImp: UIView, RegistrationView {
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(viewDidTap))
         addGestureRecognizer(recognizer)
 
-        imageView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        imageView.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
         imageView.layer.shadowOpacity = 1
         imageView.layer.shadowRadius = 8
         imageView.layer.shadowOffset = CGSize(width: 0, height: 5)
         imageView.clipsToBounds = false
 
         registrationLabel.frame = CGRect(x: 0, y: 0, width: 139, height: 27)
-        registrationLabel.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        registrationLabel.textColor = UIColor(.black)
 
         configureTextField(textField: loginTextField)
         configureTextField(textField: passwordTextField)
@@ -61,7 +69,7 @@ class RegistrationViewImp: UIView, RegistrationView {
             name: UIResponder.keyboardWillHideNotification,
             object: nil
         )
-}
+    }
 
     private func configureTextField(textField: UITextField) {
         textField.clipsToBounds = true
@@ -72,14 +80,14 @@ class RegistrationViewImp: UIView, RegistrationView {
         textField.layer.borderColor = UIColor(.black).cgColor
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: textField.frame.height))
         textField.leftViewMode = UITextField.ViewMode.always
-        textField.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        textField.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
         textField.layer.shadowOpacity = 1
         textField.layer.shadowRadius = 8
         textField.layer.shadowOffset = CGSize(width: 0, height: 5)
     }
 
     private func configureButton(button: UIButton) {
-        button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        button.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
         button.layer.shadowOpacity = 1
         button.layer.shadowRadius = 8
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
@@ -92,10 +100,16 @@ class RegistrationViewImp: UIView, RegistrationView {
     private func registrationDoneDidTap(sender: UIButton) {
         loginTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
+        repeatPasswordTextField.resignFirstResponder()
+        delegate?.registrationDoneDidTap(
+            login: loginTextField.text ?? "",
+            password: passwordTextField.text ?? ""
+        )
     }
 
     @IBAction
     private func backDidTap(sender: UIButton) {
+        delegate?.backDidTap()
     }
 
     @objc
