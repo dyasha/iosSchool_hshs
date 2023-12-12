@@ -33,7 +33,9 @@ class CharactersViewController<View: CharactersView>: BaseViewController<View> {
         rootView.setView()
         rootView.update(data: CharactersViewData(cells: charactersUrlList.map { CharactersCellData(url: $0) }))
         charactersUrlList.enumerated().forEach { idx, url in
-            requestCharacter(url: url) { [weak self] character in
+            requestCharacter(url: url) { [weak self] character in          
+                self?.imageService.getImage(url: character.image, completion: { [weak self] image in
+                    print(image ?? 0 )
                 guard let self else {
                     return
                 }
@@ -70,6 +72,7 @@ class CharactersViewController<View: CharactersView>: BaseViewController<View> {
             }
         }
     }
+
     private func getCharacter(id: Int) {
         charactersDataProvider.getCharacter(id: id) { character, error in
             print(character ?? "нет персонажа")
