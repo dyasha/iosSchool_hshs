@@ -64,8 +64,10 @@ extension RegistrationViewController: RegistrationViewDelegate {
         }
         self.storageManager.saveLastLoginDate()
         self.onRegistrationSuccess?()
+    }
 
     func backDidTap() {
         dismiss(animated: true, completion: nil)
     }
+
 }
