@@ -46,7 +46,14 @@ class CharactersViewController<View: CharactersView>: BaseViewController<View> {
                     ))
                 }
                 self.imageService.getImage(url: character.image, completion: { [weak self] image in
-                    print(image?.size ?? 0)
+                    DispatchQueue.main.async {
+                        self?.rootView.updateCharacter(idx: idx, with: CharactersCellData.init(
+                            character: character,
+                            isLoading: false,
+                            image: image,
+                            selectClosure: nil
+                        ))
+                    }
                 })
             }
         }
