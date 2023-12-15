@@ -67,7 +67,7 @@ class CharactersViewController<View: CharactersView>: BaseViewController<View> {
             return
         }
         DispatchQueue.global().async {
-            self.charactersDataProvider.character(url: url) { [weak self] character, error in
+            self.charactersDataProvider.character(url: url) { [weak self] character, _ in
                 if let character {
                     self?.updateQueue.async {
                         self?.characters.append(character)
