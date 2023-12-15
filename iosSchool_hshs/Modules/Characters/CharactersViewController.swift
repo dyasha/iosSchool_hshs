@@ -8,6 +8,7 @@
 import UIKit
 
 class CharactersViewController<View: CharactersView>: BaseViewController<View> {
+    var selectCharacter: ((CharactersCellData) -> Void)?
     private var characters: [Character] = []
     private let charactersDataProvider: CharactersDataProvider
     private let charactersUrlList: [String]
@@ -32,6 +33,13 @@ class CharactersViewController<View: CharactersView>: BaseViewController<View> {
 
         rootView.setView()
         rootView.update(data: CharactersViewData(cells: charactersUrlList.map { CharactersCellData(url: $0) }))
+        
+        let selectClosure: ((CoreCellInputData) -> Void)? = { [weak self] data in
+            guard let data = data as? CharactersCellData else {// !data.isLoading else {
+                return
+            }
+            self?.selectCharacter?(data)
+        }
         charactersUrlList.enumerated().forEach { idx, url in
             requestCharacter(url: url) { [weak self] character in
                 guard let self else {
@@ -42,11 +50,11 @@ class CharactersViewController<View: CharactersView>: BaseViewController<View> {
                         character: character,
                         isLoading: true,
                         image: nil,
-                        selectClosure: nil
+                        selectClosure: selectClosure
                     ))
                 }
                 self.imageService.getImage(url: character.image, completion: { [weak self] image in
-                    print(image?.size ?? 0)
+//                    print(image?.size ?? 0)
                 })
             }
         }

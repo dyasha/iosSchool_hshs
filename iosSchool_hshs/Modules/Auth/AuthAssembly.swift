@@ -23,6 +23,6 @@ extension Assembly: AuthAssembly {
     }
 
     func authCoordinator(onOpenLogin: (() -> Void)?) -> AuthCoordinator {
-        AuthCoordinator(assemlby: self, context: .init(onOpenLogin: onOpenLogin))
+        AuthCoordinator(assembly: self, context: .init(onOpenLogin: onOpenLogin))
     }
 }

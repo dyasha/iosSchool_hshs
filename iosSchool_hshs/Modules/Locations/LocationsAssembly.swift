@@ -23,6 +23,6 @@ extension Assembly: LocationsAssembly {
     }
 
     func locationsCoordinator() -> LocationsCoordinator {
-        LocationsCoordinator(assemlby: self, context: .init())
+        LocationsCoordinator(assembly: self, context: .init())
     }
 }
