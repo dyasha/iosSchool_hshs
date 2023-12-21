@@ -12,6 +12,10 @@ class PersonHeaderView: UICollectionReusableView, CoreReusableView {
 
     @IBOutlet private weak var titleLable: UILabel!
 
+    override func awakeFromNib() {
+        titleLable.font = UIFont.systemFont(ofSize: 18)
+    }
+
     static func layoutItem() -> NSCollectionLayoutBoundarySupplementaryItem? {
         let headerSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),

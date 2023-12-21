@@ -52,7 +52,7 @@ class CharactersViewImp: UIView, CharactersView {
         cell.update(with: data)
     }
 
-    // MARK: Private methods
+    // MARK: - Private methods
 
     private func layout() -> UICollectionViewLayout {
         UICollectionViewCompositionalLayout { [unowned self] section, env -> NSCollectionLayoutSection? in

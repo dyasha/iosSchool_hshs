@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,32 +12,70 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PersonEpisodeCell" customModule="iosSchool_hshs" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="112" height="154"/>
+            <rect key="frame" x="0.0" y="0.0" width="135" height="130"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="112" height="154"/>
+                <rect key="frame" x="0.0" y="0.0" width="135" height="130"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLm-LR-nz8">
-                        <rect key="frame" x="5" y="5" width="102" height="144"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Lawnmower Dogdfdfdfdfdfdfdfdfddfddfgsbgfb" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zD-Ev-PeF">
+                        <rect key="frame" x="15" y="54" width="106" height="40.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHF-cb-nhH">
+                        <rect key="frame" x="11" y="104.5" width="114" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYq-dd-yuI">
+                        <rect key="frame" x="12" y="10" width="32" height="32"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyJ-sR-QHJ">
+                                <rect key="frame" x="6" y="6.5" width="20.5" height="19"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83137255909999996" green="0.91372549530000002" blue="0.78039217000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vyJ-sR-QHJ" firstAttribute="centerX" secondItem="sYq-dd-yuI" secondAttribute="centerX" id="Guc-Wl-bDL"/>
+                            <constraint firstAttribute="height" constant="32" id="UJW-uc-GUU"/>
+                            <constraint firstItem="vyJ-sR-QHJ" firstAttribute="centerY" secondItem="sYq-dd-yuI" secondAttribute="centerY" id="amh-Fy-zhF"/>
+                            <constraint firstAttribute="width" constant="32" id="z5i-SY-dnl"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" name="iceberg"/>
             <constraints>
-                <constraint firstItem="kLm-LR-nz8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="OnE-D2-Egz"/>
-                <constraint firstAttribute="trailing" secondItem="kLm-LR-nz8" secondAttribute="trailing" constant="5" id="bpS-hc-rPG"/>
-                <constraint firstItem="kLm-LR-nz8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="rmQ-Sm-sWD"/>
-                <constraint firstAttribute="bottom" secondItem="kLm-LR-nz8" secondAttribute="bottom" constant="5" id="zgP-xU-nOn"/>
+                <constraint firstItem="kHF-cb-nhH" firstAttribute="top" secondItem="4zD-Ev-PeF" secondAttribute="bottom" constant="10" id="2xv-fR-a3k"/>
+                <constraint firstAttribute="bottom" secondItem="kHF-cb-nhH" secondAttribute="bottom" constant="12" id="EdA-gD-cDP"/>
+                <constraint firstItem="sYq-dd-yuI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="SQy-h4-uKo"/>
+                <constraint firstAttribute="trailing" secondItem="kHF-cb-nhH" secondAttribute="trailing" constant="10" id="SqW-bR-xFp"/>
+                <constraint firstItem="kHF-cb-nhH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="11" id="SsX-4W-bdx"/>
+                <constraint firstItem="sYq-dd-yuI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="Xx5-hn-8vk"/>
+                <constraint firstItem="4zD-Ev-PeF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="qgp-Fc-iSa"/>
+                <constraint firstItem="4zD-Ev-PeF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="54" id="xUq-oK-9tR"/>
+                <constraint firstAttribute="trailing" secondItem="4zD-Ev-PeF" secondAttribute="trailing" constant="14" id="yM7-Un-q8E"/>
             </constraints>
-            <size key="customSize" width="112" height="154"/>
+            <size key="customSize" width="135" height="130"/>
             <connections>
-                <outlet property="numberLabel" destination="kLm-LR-nz8" id="Kyy-wn-eN5"/>
+                <outlet property="dateLabel" destination="kHF-cb-nhH" id="Cls-rm-c4D"/>
+                <outlet property="nameLabel" destination="4zD-Ev-PeF" id="2Tu-rh-de0"/>
+                <outlet property="numberLabel" destination="vyJ-sR-QHJ" id="efj-yP-k46"/>
+                <outlet property="numberView" destination="sYq-dd-yuI" id="daq-ek-eMw"/>
             </connections>
-            <point key="canvasLocation" x="58.015267175572518" y="56.338028169014088"/>
+            <point key="canvasLocation" x="-213.59999999999999" y="-139.43028485757122"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <namedColor name="iceberg">
+            <color red="0.75" green="0.85000002384185791" blue="0.875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
