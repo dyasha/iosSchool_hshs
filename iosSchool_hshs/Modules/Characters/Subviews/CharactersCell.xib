@@ -41,9 +41,6 @@
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="125" id="QgV-f7-vnc"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="characters-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Chk-z0-WNy">
-                        <rect key="frame" x="0.0" y="6" width="186" height="147"/>
-                    </imageView>
                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="jic-P8-rni">
                         <rect key="frame" x="67.666666666666671" y="65.666666666666671" width="51" height="51"/>
                         <constraints>
@@ -58,17 +55,13 @@
             <color key="backgroundColor" name="iceberg"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="E1I-DS-Sc6" secondAttribute="trailing" constant="20" id="12V-BP-G4C"/>
-                <constraint firstItem="Chk-z0-WNy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ArK-nk-Q9z"/>
                 <constraint firstItem="E1I-DS-Sc6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NKa-eR-kdp"/>
-                <constraint firstAttribute="bottom" secondItem="Chk-z0-WNy" secondAttribute="bottom" constant="29" id="Pbz-Vu-Lk2"/>
-                <constraint firstItem="Chk-z0-WNy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="QZa-7y-Em5"/>
                 <constraint firstItem="jic-P8-rni" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Rag-Br-QuE"/>
                 <constraint firstItem="nKZ-or-ryq" firstAttribute="top" secondItem="E1I-DS-Sc6" secondAttribute="bottom" constant="1" id="VsS-GF-vag"/>
                 <constraint firstItem="E1I-DS-Sc6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="fU3-zG-bLh"/>
                 <constraint firstAttribute="bottom" secondItem="nKZ-or-ryq" secondAttribute="bottom" constant="3" id="ger-5d-VwF"/>
                 <constraint firstItem="jic-P8-rni" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="mRQ-y8-lBO"/>
                 <constraint firstItem="nKZ-or-ryq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="27" id="s7o-Vz-rJI"/>
-                <constraint firstAttribute="trailing" secondItem="Chk-z0-WNy" secondAttribute="trailing" id="vP8-f9-BRt"/>
                 <constraint firstAttribute="trailing" secondItem="nKZ-or-ryq" secondAttribute="trailing" constant="27" id="z8j-wB-Dlt"/>
             </constraints>
             <size key="customSize" width="186" height="182"/>
@@ -77,13 +70,11 @@
                 <outlet property="genderSpeciesLabel" destination="HIp-y1-8by" id="Tz8-69-wRU"/>
                 <outlet property="imageView" destination="E1I-DS-Sc6" id="BGY-Jf-3q2"/>
                 <outlet property="nameLabel" destination="KFv-Jd-hSG" id="gMK-5f-OXA"/>
-                <outlet property="placeholderImageView" destination="Chk-z0-WNy" id="PVT-7P-4Jp"/>
             </connections>
             <point key="canvasLocation" x="181.3953488372093" y="-25.751072961373392"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="characters-placeholder" width="167" height="132"/>
         <namedColor name="iceberg">
             <color red="0.75" green="0.85000002384185791" blue="0.875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
