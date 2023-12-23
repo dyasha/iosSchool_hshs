@@ -27,6 +27,7 @@ class CharactersCell: UICollectionViewCell, CoreCellView {
         layer.shadowOpacity = 1
         layer.shadowRadius = 8
         layer.shadowOffset = CGSize(width: 0, height: 5)
+        activityIndicator.hidesWhenStopped = true
     }
 
     static func layoutSection() -> NSCollectionLayoutSection {
@@ -48,14 +49,13 @@ class CharactersCell: UICollectionViewCell, CoreCellView {
         group.interItemSpacing = .fixed(24)
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 30
-        section.contentInsets = NSDirectionalEdgeInsets(top: 59, leading: 16, bottom: 0, trailing: 16)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 59, leading: 16, bottom: 71, trailing: 16)
         return section
     }
     func update(with inputData: CharactersCellData) {
         nameLabel.text = inputData.name
         genderSpeciesLabel.text = inputData.genderSpecies
         if inputData.isLoading {
-            activityIndicator.hidesWhenStopped = true
             activityIndicator.startAnimating()
             imageView.image = UIImage(named: "characters-placeholder")
         } else {
