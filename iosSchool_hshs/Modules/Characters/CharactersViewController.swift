@@ -54,7 +54,14 @@ class CharactersViewController<View: CharactersView>: BaseViewController<View> {
                     ))
                 }
                 self.imageService.getImage(url: character.image, completion: { [weak self] image in
-//                    print(image?.size ?? 0)
+                    DispatchQueue.main.async {
+                        self?.rootView.updateCharacter(idx: idx, with: CharactersCellData.init(
+                            character: character,
+                            isLoading: false,
+                            image: image,
+                            selectClosure: selectClosure
+                        ))
+                    }
                 })
             }
         }
@@ -68,7 +75,7 @@ class CharactersViewController<View: CharactersView>: BaseViewController<View> {
             return
         }
         DispatchQueue.global().async {
-            self.charactersDataProvider.character(url: url) { [weak self] character, error in
+            self.charactersDataProvider.character(url: url) { [weak self] character, _ in
                 if let character {
                     self?.updateQueue.async {
                         self?.characters.append(character)
