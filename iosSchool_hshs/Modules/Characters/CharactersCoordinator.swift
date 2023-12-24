@@ -13,6 +13,14 @@ class CharactersCoordinator: BaseCoordinator<CharactersCoordinator.Context> {
     }
 
     override func make() -> UIViewController? {
-        assembly.charactersVC(data: context.data)
+        let controller = assembly.charactersVC(data: context.data)
+        controller.selectCharacter = { [weak controller] locationData in
+            let coordinator = self.assembly.personCoordinator(data: locationData)
+            guard let characterVC = coordinator.make() else {
+                return
+            }
+            controller?.navigationController?.pushViewController(characterVC, animated: true)
+        }
+        return controller
     }
 }

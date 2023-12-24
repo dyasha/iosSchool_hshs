@@ -12,8 +12,8 @@ class BaseCoordinator<Context> {
     let assembly: Assembly
     let context: Context
 
-    init(assemlby: Assembly, context: Context) {
-        self.assembly = assemlby
+    init(assembly: Assembly, context: Context) {
+        self.assembly = assembly
         self.context = context
     }
 

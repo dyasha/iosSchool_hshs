@@ -27,6 +27,6 @@ extension Assembly: RegistrationAssembly {
     }
 
     func registrationCoordinator(onRegistrationSuccess: (() -> Void)?) -> RegistrationCoordinator {
-        RegistrationCoordinator(assemlby: self, context: .init(onRegistrationSuccess: onRegistrationSuccess))
+        RegistrationCoordinator(assembly: self, context: .init(onRegistrationSuccess: onRegistrationSuccess))
     }
 }
