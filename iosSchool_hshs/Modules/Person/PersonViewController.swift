@@ -33,14 +33,16 @@ class PersonViewController<View: PersonView>: BaseViewController<View> {
         view.backgroundColor = UIColor(named: "background-color")
 
         rootView.setView()
-        self.imageService.getImage(url: self.imageUrl ?? "", completion: { image in
-            guard let image else {
-                return
-            }
-            DispatchQueue.main.async {
-                self.rootView.update(data: .init(image: image, episodeUrls: self.episodesUrlList))
-            }
-        })
+        if let imageUrl = imageUrl {
+            imageService.getImage(url: imageUrl , completion: { [weak self] image in
+                guard let image else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    self?.rootView.update(data: .init(image: image, episodeUrls: self?.episodesUrlList ?? []))
+                }
+            })
+        }
         self.episodesUrlList.enumerated().forEach { idx, url in
             requestEpisode(url: url) { [weak self] episode in
                 guard let self else {
@@ -61,11 +63,13 @@ class PersonViewController<View: PersonView>: BaseViewController<View> {
     private func requestEpisode(url: String, completion: @escaping (Episode) -> Void) {
         DispatchQueue.global().async {
             self.dataProvider.episode(url: url) { episode, _ in
-                if let episode {
-                    self.updateQueue.async {
-                        self.episodes.append(episode)
-                        completion(episode)
-                    }
+                guard let episode else {
+                    return
+                }
+                self.updateQueue.async {
+                    self.episodes.append(episode)
+                    completion(episode)
+
                 }
             }
         }

@@ -483,7 +483,7 @@
 		59CE9CC82AF9222E00E5A110 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				59EB314E2B319533002D9B62 /* Profile  */,
+				59EB314E2B319533002D9B62 /* Profile */,
 				599B20DE2B29F0C600F2690A /* Person */,
 				59BFBFBD2B05053A000F3925 /* Characters */,
 				590BD9952B03B1FC002BE87C /* Locations */,
@@ -528,7 +528,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		59EB314E2B319533002D9B62 /* Profile  */ = {
+		59EB314E2B319533002D9B62 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				59EB315B2B3195C6002D9B62 /* Subviews */,
@@ -539,7 +539,7 @@
 				59EB31572B3195A9002D9B62 /* ProfileAssembly.swift */,
 				59EB31592B3195B7002D9B62 /* ProfileCoordinator.swift */,
 			);
-			path = "Profile ";
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		59EB315B2B3195C6002D9B62 /* Subviews */ = {

@@ -9,6 +9,6 @@ import UIKit
 
 struct ProfileFieldCellData: CoreCellInputData {
     var selectClosure: ((CoreCellInputData) -> Void)?
-    let date: String
-    let color: UIColor
+    let date: String?
+    let color: UIColor?
 }

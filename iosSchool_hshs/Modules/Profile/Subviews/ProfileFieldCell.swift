@@ -8,40 +8,46 @@
 import UIKit
 
 class ProfileFieldCell: UICollectionViewCell, CoreCellView {
-    @IBOutlet private weak var dateView: UIView!
+    @IBOutlet private weak var sectionView: UIView!
+    @IBOutlet private weak var textLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var colorView: UIView!
-    @IBOutlet private weak var colorCircleView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         clipsToBounds = false
-        configureLabel(label: dateView)
-        configureLabel(label: colorView)
-        colorCircleView.layer.cornerRadius = 10
-        colorCircleView.clipsToBounds = false
+        configureLabel(label: sectionView)
+        colorView.layer.cornerRadius = 10
+        colorView.clipsToBounds = false
     }
 
     static func layoutSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
-            heightDimension: .absolute(98)
+            heightDimension: .fractionalHeight(0.5)
         )
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
             heightDimension: .absolute(98)
         )
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 2)
+        group.interItemSpacing = .fixed(18)
         let section = NSCollectionLayoutSection(group: group)
-        section.interGroupSpacing = 0
         section.contentInsets = NSDirectionalEdgeInsets(top: 70, leading: 0, bottom: 0, trailing: 0)
         return section
     }
 
     func update(with inputData: ProfileFieldCellData) {
-        dateLabel.text = inputData.date
-        colorCircleView.backgroundColor = inputData.color
+        guard let date = inputData.date else {
+            textLabel.text = "Цвет профиля"
+            colorView.backgroundColor = inputData.color ?? .black
+            dateLabel.isHidden = true
+            return
+        }
+        textLabel.text = "Дата входа"
+        dateLabel.text = inputData.date ?? ".. .. ...."
+        colorView.isHidden = true
     }
 
     // MARK: - Private methods

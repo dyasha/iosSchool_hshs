@@ -28,17 +28,16 @@ class ProfileViewController<View: ProfileView>: BaseViewController<View> {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "background-color")
         rootView.setView()
-        let selectClosure: ((CoreCellInputData) -> Void)? = { [weak self] _ in
-            self?.storageManager.removeToken()
-            self?.onLogout?()
-        }
         rootView.update(
             data: .init(
-                image: UIImage(named: "registration-foreground") ?? UIImage(),
+                image: UIImage(named: "registration-foreground"),
                 login: self.storageManager.getLogin(),
-                date: self.dateFormatter.formate(date: self.storageManager.getLastLoginDate() ?? Date()),
-                color: UIColor(named: "iceberg") ?? .black,
-                onLogout: selectClosure
+                date: self.dateFormatter.formate(date: self.storageManager.getLastLoginDate()),
+                color: UIColor(named: "iceberg"),
+                onLogout: { [weak self] _ in
+                    self?.storageManager.removeToken()
+                    self?.onLogout?()
+                }
             )
         )
     }

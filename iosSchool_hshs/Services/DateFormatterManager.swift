@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DateFormatterManager {
-    func formate(date: Date) -> String
+    func formate(date: Date?) -> String?
 }
 
 class DateFormatterManagerImp: DateFormatterManager {
@@ -18,8 +18,11 @@ class DateFormatterManagerImp: DateFormatterManager {
         self.dateFormatter = DateFormatter()
     }
 
-    func formate(date: Date) -> String {
-        dateFormatter.dateFormat = "dd MM yyyy"
+    func formate(date: Date?) -> String? {
+        guard let date else {
+            return ".. .. ...."
+        }
+        dateFormatter.dateFormat = "dd.MM.yyyy"
         return dateFormatter.string(from: date)
     }
 }

@@ -16,7 +16,7 @@ struct PersonEpisodeCellData: CoreCellInputData {
     init(episode: Episode) {
         name = episode.name
         airDate = episode.airDate
-        self.number = String(episode.id)
+        number = String(episode.id)
     }
 
     init?(url: String) {

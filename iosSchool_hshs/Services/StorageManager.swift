@@ -16,7 +16,7 @@ protocol StorageManager {
     func saveLastLoginDate()
     func getLastLoginDate() -> Date?
     func saveLogin(login: String)
-    func getLogin() -> String
+    func getLogin() -> String?
 }
 
 class StorageManagerImp: StorageManager {
@@ -74,8 +74,8 @@ class StorageManagerImp: StorageManager {
         UserDefaults.standard.set(login, forKey: StorageManagerKey.login.rawValue)
     }
 
-    func getLogin() -> String {
-        return UserDefaults.standard.object(forKey: StorageManagerKey.login.rawValue) as? String ?? "Логина нет =("
+    func getLogin() -> String? {
+        return UserDefaults.standard.object(forKey: StorageManagerKey.login.rawValue) as? String
     }
 }
 

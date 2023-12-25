@@ -27,8 +27,6 @@ class PersonViewImp: UIView, PersonView {
     func setView() {
         collectionView.backgroundColor = .clear
         collectionView.dataSource = self
-//        collectionView.delegate = self
-
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(collectionView)
         collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
@@ -50,10 +48,10 @@ class PersonViewImp: UIView, PersonView {
         guard let index = sections.firstIndex(where: { $0 is PersonEpisodeSection }) else {
             return
         }
-        sections[index].updateCell(at: IndexPath(item: idx, section: 1), with: data)
+        sections[index].updateCell(at: IndexPath(item: idx, section: index), with: data)
         guard let cell = sections[index].cell(
             collectionView: collectionView,
-            indexPath: IndexPath(item: idx, section: 1)
+            indexPath: IndexPath(item: idx, section: index)
         ) as? PersonEpisodeCell else {
             return
         }

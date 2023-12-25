@@ -61,7 +61,7 @@ class ProfileViewImp: UIView, ProfileView {
             case .loginSection:
                 return ProfileLoginSection(cellsData: [data.profileLoginCellData])
             case .fieldSection:
-                return ProfileFieldSection(cellsData: [data.profileFieldCellData])
+                return ProfileFieldSection(cellsData: data.profileFieldCellData)
             case .buttonSection:
                 return ProfileButtonSection(cellsData: [data.profileButtonCellData])
             }
@@ -77,6 +77,7 @@ class ProfileViewImp: UIView, ProfileView {
         }
     }
 }
+
 // MARK: - UICollectionViewDataSource
 
 extension ProfileViewImp: UICollectionViewDataSource {
