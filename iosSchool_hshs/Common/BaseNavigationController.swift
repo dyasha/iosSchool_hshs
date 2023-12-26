@@ -19,6 +19,10 @@ class BaseNavigationController: UINavigationController, UINavigationControllerDe
         navigationBar.barTintColor = UIColor(named: "iceberg")
         view.backgroundColor = UIColor(named: "iceberg")
         navigationBar.tintColor = UIColor.black
+        navigationBar.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
+        navigationBar.layer.shadowOpacity = 0.4
+        navigationBar.layer.shadowRadius = 5
+        navigationBar.layer.shadowOffset = CGSize(width: 0, height: 8)
     }
 
     override var childForStatusBarStyle: UIViewController? {

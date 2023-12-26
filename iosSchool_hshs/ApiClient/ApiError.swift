@@ -8,7 +8,6 @@
 import Foundation
 
 enum ApiError: Error {
-
     case dataParsing
     case serverError
     case common(Data?)

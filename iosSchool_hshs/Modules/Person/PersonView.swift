@@ -14,7 +14,6 @@ protocol PersonView: UIView {
 }
 
 class PersonViewImp: UIView, PersonView {
-
     private var sections: [CoreSection] = []
 
     private lazy var collectionView: UICollectionView = {

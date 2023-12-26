@@ -8,7 +8,6 @@
 import Foundation
 
 protocol RegistrationDataProvider {
-
     func registration (
         username: String,
         password: String,
@@ -17,7 +16,6 @@ protocol RegistrationDataProvider {
 }
 
 class RegistrationDataProviderImp: RegistrationDataProvider {
-
     private let registrationApiClient: RegistrationApiClient
 
     init(registrationApiClient: RegistrationApiClient) {

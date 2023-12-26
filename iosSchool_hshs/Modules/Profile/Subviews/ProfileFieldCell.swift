@@ -39,7 +39,7 @@ class ProfileFieldCell: UICollectionViewCell, CoreCellView {
     }
 
     func update(with inputData: ProfileFieldCellData) {
-        if let date = inputData.date {
+        if inputData.date != nil {
             textLabel.text = "Дата входа"
             dateLabel.text = inputData.date ?? ".. .. ...."
             colorView.isHidden = true

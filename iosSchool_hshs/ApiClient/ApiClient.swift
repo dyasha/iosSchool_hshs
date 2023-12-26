@@ -8,7 +8,6 @@
 import Foundation
 
 class ApiClient {
-
     func performRequest<ResponseModel: Decodable> (
         url: String,
         data: Data?,

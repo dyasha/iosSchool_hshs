@@ -8,7 +8,6 @@
 import UIKit
 
 class Section<Cell: CoreCellView, Header: CoreReusableView, Footer: CoreReusableView>: CoreSection {
-
     lazy var sectionLayoutProvider: UICollectionViewCompositionalLayoutSectionProvider? = {
         let sectionLayoutProvider: UICollectionViewCompositionalLayoutSectionProvider
         sectionLayoutProvider = { [unowned self] _, env -> NSCollectionLayoutSection? in
@@ -114,7 +113,6 @@ class Section<Cell: CoreCellView, Header: CoreReusableView, Footer: CoreReusable
 // MARK: - Items layout
 
 private extension Section {
-
     func layoutSection(env: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? {
         guard !cellsData.isEmpty else {
             return nil
