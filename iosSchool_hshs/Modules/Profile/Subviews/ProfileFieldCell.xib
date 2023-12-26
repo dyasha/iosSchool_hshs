@@ -45,24 +45,16 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="vLO-Uh-UGu" firstAttribute="leading" secondItem="1GT-tP-BsX" secondAttribute="leading" id="0L6-5O-rJY"/>
-                                    <constraint firstItem="lIv-t3-ZkD" firstAttribute="top" secondItem="1GT-tP-BsX" secondAttribute="top" id="8A9-wL-aME"/>
-                                    <constraint firstAttribute="trailing" secondItem="lIv-t3-ZkD" secondAttribute="trailing" id="JdA-ui-t74"/>
-                                    <constraint firstItem="vLO-Uh-UGu" firstAttribute="top" secondItem="1GT-tP-BsX" secondAttribute="top" id="NHw-xE-1b3"/>
-                                    <constraint firstAttribute="bottom" secondItem="lIv-t3-ZkD" secondAttribute="bottom" id="gsC-Qh-WJk"/>
-                                    <constraint firstAttribute="bottom" secondItem="vLO-Uh-UGu" secondAttribute="bottom" id="hfz-f2-S7w"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fy4-Bo-wEk" firstAttribute="leading" secondItem="qZ8-sM-VUA" secondAttribute="leading" constant="16" id="0Pb-rh-w6P"/>
+                            <constraint firstItem="1GT-tP-BsX" firstAttribute="centerY" secondItem="fy4-Bo-wEk" secondAttribute="centerY" id="9n2-yA-Qpo"/>
                             <constraint firstAttribute="trailing" secondItem="1GT-tP-BsX" secondAttribute="trailing" constant="16" id="CEc-yl-OPb"/>
                             <constraint firstAttribute="height" constant="40" id="EKe-8r-JYm"/>
                             <constraint firstItem="fy4-Bo-wEk" firstAttribute="top" secondItem="qZ8-sM-VUA" secondAttribute="top" constant="10" id="LlU-LA-ro3"/>
                             <constraint firstAttribute="bottom" secondItem="fy4-Bo-wEk" secondAttribute="bottom" constant="10" id="WIW-6U-swZ"/>
-                            <constraint firstItem="1GT-tP-BsX" firstAttribute="centerY" secondItem="qZ8-sM-VUA" secondAttribute="centerY" id="nGV-Yu-f1j"/>
                         </constraints>
                     </view>
                 </subviews>

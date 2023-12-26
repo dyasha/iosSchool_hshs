@@ -34,7 +34,7 @@ class PersonViewController<View: PersonView>: BaseViewController<View> {
 
         rootView.setView()
         if let imageUrl = imageUrl {
-            imageService.getImage(url: imageUrl , completion: { [weak self] image in
+            imageService.getImage(url: imageUrl, completion: { [weak self] image in
                 guard let image else {
                     return
                 }
@@ -69,7 +69,6 @@ class PersonViewController<View: PersonView>: BaseViewController<View> {
                 self.updateQueue.async {
                     self.episodes.append(episode)
                     completion(episode)
-
                 }
             }
         }
