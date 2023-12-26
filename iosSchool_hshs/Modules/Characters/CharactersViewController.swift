@@ -29,11 +29,10 @@ class CharactersViewController<View: CharactersView>: BaseViewController<View> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = UIColor(named: "background-color")
 
         rootView.setView()
         rootView.update(data: CharactersViewData(cells: charactersUrlList.map { CharactersCellData(url: $0) }))
-        
         let selectClosure: ((CoreCellInputData) -> Void)? = { [weak self] data in
             guard let data = data as? CharactersCellData else {// !data.isLoading else {
                 return

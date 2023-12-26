@@ -10,6 +10,7 @@ import UIKit
 class Assembly {
     lazy var imageService: ImageService = ImageServiceImp(apiClient: apiClient)
     lazy var storageManager: StorageManager = StorageManagerImp()
+    lazy var dateFormatter: DateFormatterManager = DateFormatterManagerImp()
 
     var apiClient: ApiClient {
         ApiClient()

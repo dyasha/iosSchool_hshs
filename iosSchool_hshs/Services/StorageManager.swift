@@ -15,6 +15,8 @@ protocol StorageManager {
     func removeToken()
     func saveLastLoginDate()
     func getLastLoginDate() -> Date?
+    func saveLogin(login: String)
+    func getLogin() -> String?
 }
 
 class StorageManagerImp: StorageManager {
@@ -67,6 +69,14 @@ class StorageManagerImp: StorageManager {
     func getLastLoginDate() -> Date? {
         return UserDefaults.standard.object(forKey: StorageManagerKey.lastLoginDate.rawValue) as? Date
     }
+
+    func saveLogin(login: String) {
+        UserDefaults.standard.set(login, forKey: StorageManagerKey.login.rawValue)
+    }
+
+    func getLogin() -> String? {
+        return UserDefaults.standard.object(forKey: StorageManagerKey.login.rawValue) as? String
+    }
 }
 
 private extension StorageManagerImp {
@@ -74,6 +84,7 @@ private extension StorageManagerImp {
         case token
         case notFirstLaunch
         case lastLoginDate
+        case login
     }
 
     struct Constants {
