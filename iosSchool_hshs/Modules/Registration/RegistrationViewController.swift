@@ -47,23 +47,17 @@ extension RegistrationViewController: RegistrationViewDelegate {
             DispatchQueue.main.async {
                 HUD.hide()
             }
-            guard let self, token != nil else {
+            guard let self, let token else {
                 DispatchQueue.main.async {
                     SPIndicator.present(title: error?.rawValue ?? "", haptic: .error)
                 }
                 return
             }
-            onRegistrationSuccess?()
+            self.storageManager.saveLastLoginDate()
+            self.storageManager.saveLogin(login: login)
+            self.storageManager.saveToken(token: token)
+            self.onRegistrationSuccess?()
         }
-    }
-
-    func registration() {
-        registrationDataProvider.registration(username: "maybeusertest", password: "12345678") { token, error in
-            print(token ?? "Токена нет")
-            print(error?.rawValue ?? "Нет ошибки")
-        }
-        self.storageManager.saveLastLoginDate()
-        self.onRegistrationSuccess?()
     }
 
     func backDidTap() {
