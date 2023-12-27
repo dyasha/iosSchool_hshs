@@ -53,9 +53,9 @@ extension RegistrationViewController: RegistrationViewDelegate {
                 }
                 return
             }
+            self.storageManager.saveToken(token: token)
             self.storageManager.saveLastLoginDate()
             self.storageManager.saveLogin(login: login)
-            self.storageManager.saveToken(token: token)
             self.onRegistrationSuccess?()
         }
     }
