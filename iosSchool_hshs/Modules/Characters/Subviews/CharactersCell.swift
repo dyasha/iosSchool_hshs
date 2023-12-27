@@ -18,18 +18,6 @@ class CharactersCell: UICollectionViewCell, CoreCellView {
            setupUI()
        }
 
-    private func setupUI() {
-        layer.cornerRadius = 15
-        layer.masksToBounds = false
-        layer.borderWidth = 1
-        layer.borderColor = UIColor(.clear).cgColor
-        layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
-        layer.shadowOpacity = 1
-        layer.shadowRadius = 8
-        layer.shadowOffset = CGSize(width: 0, height: 5)
-        activityIndicator.hidesWhenStopped = true
-    }
-
     static func layoutSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(0.5),
@@ -52,6 +40,7 @@ class CharactersCell: UICollectionViewCell, CoreCellView {
         section.contentInsets = NSDirectionalEdgeInsets(top: 59, leading: 16, bottom: 71, trailing: 16)
         return section
     }
+
     func update(with inputData: CharactersCellData) {
         nameLabel.text = inputData.name
         genderSpeciesLabel.text = inputData.genderSpecies
@@ -62,5 +51,19 @@ class CharactersCell: UICollectionViewCell, CoreCellView {
             activityIndicator.stopAnimating()
             imageView.image = inputData.image
         }
+    }
+
+    // MARK: - Private methods
+
+    private func setupUI() {
+        layer.cornerRadius = 15
+        layer.masksToBounds = false
+        layer.borderWidth = 1
+        layer.borderColor = UIColor(.clear).cgColor
+        layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
+        layer.shadowOpacity = 1
+        layer.shadowRadius = 8
+        layer.shadowOffset = CGSize(width: 0, height: 5)
+        activityIndicator.hidesWhenStopped = true
     }
 }

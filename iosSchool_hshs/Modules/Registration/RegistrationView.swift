@@ -9,6 +9,7 @@ import UIKit
 
 protocol RegistrationView: UIView {
     var delegate: RegistrationViewDelegate? { get set }
+
     func setView()
 }
 
@@ -71,6 +72,8 @@ class RegistrationViewImp: UIView, RegistrationView {
         )
     }
 
+    // MARK: - Private methods
+
     private func configureTextField(textField: UITextField) {
         textField.clipsToBounds = true
         textField.borderStyle = .none
@@ -93,8 +96,6 @@ class RegistrationViewImp: UIView, RegistrationView {
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
         button.layer.cornerRadius = 10
     }
-
-    // MARK: - Private
 
     @IBAction
     private func registrationDoneDidTap(sender: UIButton) {

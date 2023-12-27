@@ -11,7 +11,6 @@ protocol SplashAssembly {
     func splashCoordinator(onSucces: (() -> Void)?) -> SplashCoordinator
     func splashVC(onSucces: (() -> Void)?) -> SplashViewController<SplashViewImp>
     func splashDataProvider() -> SplashDataProvider
-
 }
 
 extension Assembly: SplashAssembly {

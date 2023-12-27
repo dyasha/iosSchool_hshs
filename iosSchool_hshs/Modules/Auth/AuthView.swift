@@ -9,6 +9,7 @@ import UIKit
 
 protocol AuthView: UIView {
     var delegate: AuthViewDelegate? { get set }
+
     func setView()
 }
 
@@ -18,15 +19,15 @@ protocol AuthViewDelegate: AnyObject {
 }
 
 class AuthViewImp: UIView, AuthView {
-        @IBOutlet private var scrollView: UIScrollView!
-        @IBOutlet private var imageView: UIImageView!
-        @IBOutlet private var labelView: UIView!
-        @IBOutlet private var titleLabel: UILabel!
-        @IBOutlet private var subTitleLabel: UILabel!
-        @IBOutlet private var loginTextField: UITextField!
-        @IBOutlet private var passwordTextField: UITextField!
-        @IBOutlet private var loginButton: UIButton!
-        @IBOutlet private var registrationButton: UIButton!
+    @IBOutlet private var scrollView: UIScrollView!
+    @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private var labelView: UIView!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var subTitleLabel: UILabel!
+    @IBOutlet private var loginTextField: UITextField!
+    @IBOutlet private var passwordTextField: UITextField!
+    @IBOutlet private var loginButton: UIButton!
+    @IBOutlet private var registrationButton: UIButton!
 
     weak var delegate: AuthViewDelegate?
 
@@ -70,7 +71,8 @@ class AuthViewImp: UIView, AuthView {
             self,
             selector: #selector(keyboardWillHide),
             name: UIResponder.keyboardWillHideNotification,
-            object: nil)
+            object: nil
+        )
     }
 
     private func configureButton(button: UIButton) {
@@ -138,5 +140,4 @@ class AuthViewImp: UIView, AuthView {
         loginTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
     }
-
 }

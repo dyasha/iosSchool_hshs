@@ -40,7 +40,6 @@
 		5951D6FE2AE8211B0042C0EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */; };
 		5951D7052AE8211D0042C0EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5951D7042AE8211D0042C0EB /* Assets.xcassets */; };
 		5951D7082AE8211D0042C0EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5951D7062AE8211D0042C0EB /* LaunchScreen.storyboard */; };
-		5951D7102AE8267B0042C0EB /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951D70F2AE8267B0042C0EB /* ColorGenerator.swift */; };
 		595339902B1E014D0065E3A3 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 5953398F2B1E014D0065E3A3 /* KeychainAccess */; };
 		595339922B1E01900065E3A3 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595339912B1E01900065E3A3 /* StorageManager.swift */; };
 		5957C73C2B2B1FA700938836 /* EpisodeApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5957C73B2B2B1FA700938836 /* EpisodeApiClient.swift */; };
@@ -158,7 +157,6 @@
 		5951D7042AE8211D0042C0EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5951D7072AE8211D0042C0EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5951D7092AE8211D0042C0EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5951D70F2AE8267B0042C0EB /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
 		595339912B1E01900065E3A3 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		5957C73B2B2B1FA700938836 /* EpisodeApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeApiClient.swift; sourceTree = "<group>"; };
 		5957C73D2B2B308D00938836 /* PersonPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonPhotoCell.swift; sourceTree = "<group>"; };
@@ -379,7 +377,6 @@
 				59134BFD2B025AE2000EA580 /* ApiClient */,
 				59134BF62B02511B000EA580 /* Models */,
 				59CE9CC82AF9222E00E5A110 /* Modules */,
-				5951D70F2AE8267B0042C0EB /* ColorGenerator.swift */,
 				5951D6FB2AE8211B0042C0EB /* AppDelegate.swift */,
 				5951D6FD2AE8211B0042C0EB /* SceneDelegate.swift */,
 				5951D7042AE8211D0042C0EB /* Assets.xcassets */,
@@ -688,7 +685,6 @@
 				59D584DC2B14D1FB00EFCBD5 /* LocationsCell.swift in Sources */,
 				5989599F2AFD138400C36DC9 /* SplashViewController.swift in Sources */,
 				594725852B18CC6E0051342D /* ImageService.swift in Sources */,
-				5951D7102AE8267B0042C0EB /* ColorGenerator.swift in Sources */,
 				59090F6A2B0640A200455440 /* BaseViewController.swift in Sources */,
 				59EB31562B319597002D9B62 /* ProfileDataProvider.swift in Sources */,
 				599B20E62B29F11400F2690A /* PersonDataProvider.swift in Sources */,

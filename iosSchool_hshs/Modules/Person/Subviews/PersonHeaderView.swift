@@ -33,5 +33,4 @@ class PersonHeaderView: UICollectionReusableView, CoreReusableView {
         titleLable.text = inputData.title
         return self
     }
-
 }

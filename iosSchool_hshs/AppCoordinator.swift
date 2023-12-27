@@ -50,7 +50,7 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
         profileVC.tabBarItem = RootTab.cabinet.tabBarItem
         tabVC.setViewControllers([navVC, profileVC], animated: false)
         setRoot(viewController: tabVC)
-        }
+    }
 
     private func setRoot(viewController: UIViewController?) {
         guard let window, let viewController else {

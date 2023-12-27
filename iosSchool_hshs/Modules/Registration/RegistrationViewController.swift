@@ -69,5 +69,4 @@ extension RegistrationViewController: RegistrationViewDelegate {
     func backDidTap() {
         dismiss(animated: true, completion: nil)
     }
-
 }

@@ -36,6 +36,7 @@ class ApiClient {
         }
         task.resume()
     }
+
     func requestImageData(url: String, completion: ((Data?) -> Void)?) {
         guard let url = URL(string: url) else {
             completion?(nil)

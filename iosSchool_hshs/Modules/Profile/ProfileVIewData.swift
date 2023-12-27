@@ -23,8 +23,8 @@ struct ProfileViewData {
         profilePhotoCellData = ProfilePhotoCellData(image: image)
         profileLoginCellData = ProfileLoginCellData(login: login)
         profileFieldCellData = [
-            ProfileFieldCellData(date: date, color: nil),
-            ProfileFieldCellData(date: nil, color: color)
+            ProfileFieldCellData(date: date, color: nil, showDate: true),
+            ProfileFieldCellData(date: nil, color: color, showDate: false)
         ]
         profileButtonCellData = ProfileButtonCellData(selectClosure: onLogout)
     }

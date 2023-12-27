@@ -16,10 +16,6 @@ class Assembly {
         ApiClient()
     }
 
-    func coloerGenerator(alpha: Double) -> ColorGenerator {
-        ColorGenerator(alpha: alpha)
-    }
-
     func appCoordinator() -> AppCoordinator {
         AppCoordinator(assembly: self, context: .init())
     }

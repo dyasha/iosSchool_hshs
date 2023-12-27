@@ -19,7 +19,8 @@ class CharactersViewImp: UIView, CharactersView {
     private lazy var collectionView: UICollectionView = {
         UICollectionView(
             frame: .zero,
-            collectionViewLayout: layout())
+            collectionViewLayout: layout()
+        )
     }()
 
     func setView() {

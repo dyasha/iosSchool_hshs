@@ -11,4 +11,11 @@ struct ProfileFieldCellData: CoreCellInputData {
     var selectClosure: ((CoreCellInputData) -> Void)?
     let date: String?
     let color: UIColor?
+    let showDate: Bool
+
+    init(date: String?, color: UIColor?, showDate: Bool) {
+        self.date = date ?? ".. .. ...."
+        self.color = color ?? .black
+        self.showDate = showDate
+    }
 }

@@ -25,5 +25,4 @@ extension Assembly: ProfileAssembly {
     func profileCoordinator(onLogout: (() -> Void)?) -> ProfileCoordinator {
         ProfileCoordinator(assembly: self, context: .init(onLogout: onLogout))
     }
-
 }

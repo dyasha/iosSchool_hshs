@@ -15,10 +15,10 @@ class LocationsCoordinator: BaseCoordinator<LocationsCoordinator.Context> {
         let locationVC = assembly.locationsVC()
         locationVC.selectLocation = { [weak locationVC] locationData in
             let coordinator = self.assembly.charactersCoordinator(data: locationData)
-                guard let characterVC = coordinator.make() else {
-                    return
-                }
-                locationVC?.navigationController?.pushViewController(characterVC, animated: true)
+            guard let characterVC = coordinator.make() else {
+                return
+            }
+            locationVC?.navigationController?.pushViewController(characterVC, animated: true)
         }
         return locationVC
     }

@@ -63,8 +63,8 @@ class StorageManagerImp: StorageManager {
     }
 
     func saveLastLoginDate() {
-            UserDefaults.standard.set(Date(), forKey: StorageManagerKey.lastLoginDate.rawValue)
-        }
+        UserDefaults.standard.set(Date(), forKey: StorageManagerKey.lastLoginDate.rawValue)
+    }
 
     func getLastLoginDate() -> Date? {
         return UserDefaults.standard.object(forKey: StorageManagerKey.lastLoginDate.rawValue) as? Date

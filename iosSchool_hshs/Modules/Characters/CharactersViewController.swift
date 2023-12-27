@@ -34,7 +34,7 @@ class CharactersViewController<View: CharactersView>: BaseViewController<View> {
         rootView.setView()
         rootView.update(data: CharactersViewData(cells: charactersUrlList.map { CharactersCellData(url: $0) }))
         let selectClosure: ((CoreCellInputData) -> Void)? = { [weak self] data in
-            guard let data = data as? CharactersCellData else {// !data.isLoading else {
+            guard let data = data as? CharactersCellData else {
                 return
             }
             self?.selectCharacter?(data)
@@ -75,20 +75,14 @@ class CharactersViewController<View: CharactersView>: BaseViewController<View> {
         }
         DispatchQueue.global().async {
             self.charactersDataProvider.character(url: url) { [weak self] character, _ in
-                if let character {
-                    self?.updateQueue.async {
-                        self?.characters.append(character)
-                        completion(character)
-                    }
+                guard let character else {
+                    return
+                }
+                self?.updateQueue.async {
+                    self?.characters.append(character)
+                    completion(character)
                 }
             }
-        }
-    }
-
-    private func getCharacter(id: Int) {
-        charactersDataProvider.getCharacter(id: id) { character, error in
-            print(character ?? "нет персонажа")
-            print(error?.rawValue ?? "Нет ошибки")
         }
     }
 }

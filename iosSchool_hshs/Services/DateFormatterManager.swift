@@ -15,12 +15,12 @@ class DateFormatterManagerImp: DateFormatterManager {
     private let dateFormatter: DateFormatter
 
     init() {
-        self.dateFormatter = DateFormatter()
+        dateFormatter = DateFormatter()
     }
 
     func formate(date: Date?) -> String? {
         guard let date else {
-            return ".. .. ...."
+            return nil
         }
         dateFormatter.dateFormat = "dd.MM.yyyy"
         return dateFormatter.string(from: date)

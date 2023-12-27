@@ -8,9 +8,7 @@
 import Foundation
 
 protocol LocationsApiClient {
-    func getLocations (
-        onRequestCompleted: @escaping (LocationsList?, ApiError?) -> Void
-    )
+    func getLocations(onRequestCompleted: @escaping (LocationsList?, ApiError?) -> Void)
 }
 
 extension ApiClient: LocationsApiClient {

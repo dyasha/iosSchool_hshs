@@ -62,12 +62,12 @@ class PersonViewController<View: PersonView>: BaseViewController<View> {
 
     private func requestEpisode(url: String, completion: @escaping (Episode) -> Void) {
         DispatchQueue.global().async {
-            self.dataProvider.episode(url: url) { episode, _ in
+            self.dataProvider.episode(url: url) { [weak self] episode, _ in
                 guard let episode else {
                     return
                 }
-                self.updateQueue.async {
-                    self.episodes.append(episode)
+                self?.updateQueue.async {
+                    self?.episodes.append(episode)
                     completion(episode)
                 }
             }

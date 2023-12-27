@@ -22,7 +22,7 @@ extension ApiClient: AuthApiClient {
         onRequestCompleted: @escaping (TokenResponse?, ApiError?) -> Void
     ) {
         let url = NetworkConstants.URLStrings.nanoPost +
-        "/auth/login?username=\(login)&password=\(password)"
+            "/auth/login?username=\(login)&password=\(password)"
         performRequest(url: url, data: nil, method: .get) { (result: Result<TokenResponse, ApiError>) in
             switch result {
             case .success(let token):

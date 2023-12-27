@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class LocationsViewController<View: LocationsView>: BaseViewController<View> {
     var selectLocation: ((LocationsCellData) -> Void)?
@@ -51,12 +52,16 @@ class LocationsViewController<View: LocationsView>: BaseViewController<View> {
     }
 
     private func getLocations() {
+        HUD.show(.progress)
         locationsDataProvider.getLocations { [weak self] locations, error in
             guard let locations else {
                 print(error?.rawValue ?? "Нет ошибки")
                 return
             }
             self?.rootView.update(data: LocationsViewData(list: locations))
+            DispatchQueue.main.async {
+                HUD.hide()
+            }
         }
     }
 }
