@@ -53,14 +53,17 @@ class LocationsViewController<View: LocationsView>: BaseViewController<View> {
 
     private func getLocations() {
         HUD.show(.progress)
-        locationsDataProvider.getLocations { [weak self] locations, error in
-            guard let locations else {
-                print(error?.rawValue ?? "Нет ошибки")
-                return
-            }
-            self?.rootView.update(data: LocationsViewData(list: locations))
-            DispatchQueue.main.async {
-                HUD.hide()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
+            self?.locationsDataProvider.getLocations { [weak self] locations, error in
+                guard let locations else {
+                    print(error?.rawValue ?? "Нет ошибки")
+                    HUD.hide()
+                    return
+                }
+                self?.rootView.update(data: LocationsViewData(list: locations))
+                DispatchQueue.main.async {
+                    HUD.hide()
+                }
             }
         }
     }
